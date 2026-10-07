@@ -31,4 +31,5 @@
         <maven.compiler.release>26</maven.compiler.release>
         <exec.mainClass>e3.samplegui.SampleGUI</exec.mainClass>
     </properties>
+    <name>MFBook</name>
 </project>
