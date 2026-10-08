@@ -1,11 +1,11 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
-public class CreateBooking extends javax.swing.JFrame {
+public class BookingMap extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CreateBooking.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(BookingMap.class.getName());
 
 
-    public CreateBooking() {
+    public BookingMap() {
         initComponents();
         Date d = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
@@ -308,7 +308,7 @@ public class CreateBooking extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new CreateBooking().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new BookingMap().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
