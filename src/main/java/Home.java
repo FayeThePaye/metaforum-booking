@@ -106,7 +106,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        CreateBooking CB = new CreateBooking();
+        BookingMap CB = new BookingMap();
         CB.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

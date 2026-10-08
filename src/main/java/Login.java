@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Login extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
@@ -11,6 +13,7 @@ public class Login extends javax.swing.JFrame {
     
     int stuID;
     String pswd;
+    ArrayList<Student> students= new ArrayList<>();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -133,13 +136,27 @@ public class Login extends javax.swing.JFrame {
         stuID = Integer.parseInt(jTextField1.getText());
         pswd = jPasswordField1.getText();
         System.out.println(stuID + pswd);
-        
+        students.add(new Student(stuID, pswd));
+        MFBook.currentUser = students.get(students.size() - 1);
+        Home home = new Home();
+        home.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         stuID = Integer.parseInt(jTextField1.getText());
         pswd = jPasswordField1.getText();
         System.out.println(stuID + pswd);
+        int studentAmount = students.size();
+        for (int i = 0; i < studentAmount; i++) {
+            if (students.get(i).stuID == stuID && students.get(i).pswd.equals(pswd)) {
+                MFBook.currentUser = students.get(i);
+                Home home = new Home();
+                home.setVisible(true);
+                this.dispose();
+                break;
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -319,7 +319,7 @@ public bookingTab() {
         var hour2 = Integer.parseInt(jTextField3.getText());
         var minute1 = Integer.parseInt(jTextField2.getText());
         var minute2 = Integer.parseInt(jTextField4.getText());
-        if (Bookutil.checkTimeValidity(hour1, minute1, hour2, minute2)) {
+        if (MFBook.checkTimeValidity(hour1, minute1, hour2, minute2)) {
             System.out.println(hour1 + hour2 + minute1 + minute2);
             jDialog1.pack();
             jDialog1.setLocationRelativeTo(null);
