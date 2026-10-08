@@ -1,5 +1,6 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 public class bookingTab extends javax.swing.JFrame {
     int capacity = 0;
     int chairs = 0;
@@ -314,11 +315,11 @@ public bookingTab() {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        var hour1 = parseText(jTextField1.getText());
+        var hour2 = parseText(jTextField3.getText());
+        var minute1 = parseText(jTextField2.getText());
+        var minute2 = parseText(jTextField4.getText());
 
-        var hour1 = Integer.parseInt(jTextField1.getText());
-        var hour2 = Integer.parseInt(jTextField3.getText());
-        var minute1 = Integer.parseInt(jTextField2.getText());
-        var minute2 = Integer.parseInt(jTextField4.getText());
         if (Bookutil.checkTimeValidity(hour1, minute1, hour2, minute2)) {
             System.out.println(hour1 + hour2 + minute1 + minute2);
             jDialog1.pack();
@@ -334,6 +335,11 @@ public bookingTab() {
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private int parseText(String str) {
+        str = str.replaceAll("[^0-9]", "");
+        return Integer.parseInt(str);
+    } 
+    
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
 
     }//GEN-LAST:event_jTextField1ActionPerformed
