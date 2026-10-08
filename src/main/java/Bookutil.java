@@ -1,5 +1,6 @@
+import java.time.LocalTime;
+
 public class Bookutil {
-    
     public static boolean checkTimeValidity(int hour1, int minute1, int hour2, int minute2) {
         if (hour1 < 0 || hour2 < 0 || minute1 < 0 || minute2 < 0) {
             System.out.println("less than 0");
@@ -19,7 +20,18 @@ public class Bookutil {
         } else if (hour1 < 8 || hour2 < 8) {
             System.out.println("case 6");
             return false;
+        } 
+        LocalTime now = LocalTime.now();
+        int currentHour = now.getHour();
+        int currentMinute = now.getMinute();
+        if (hour1 < currentHour) {
+            System.out.println("Booking start time is in the past!");
+            return false;
+        }else if (hour1 == currentHour && minute1 < currentMinute) {
+            System.out.println("Booking start time is in the past!");
+            return false;
         }
+        
         return true;
     }
 }

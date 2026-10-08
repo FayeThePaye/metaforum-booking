@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
 public class bookingTab extends javax.swing.JFrame {
     int capacity = 0;
     int chairs = 0;
@@ -13,6 +15,7 @@ public bookingTab() {
     this(0, 0, 0, 0); // Calls the 4-arg constructor with default zeroes
 }
     public bookingTab(int cap, int chair, int table, int roomType) {
+
         initComponents();
         capacity = cap;
         chairs = chair;
@@ -311,10 +314,11 @@ public bookingTab() {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int hour1 = Integer.parseInt(jTextField1.getText());
-        int hour2 = Integer.parseInt(jTextField3.getText());
-        int minute1 = Integer.parseInt(jTextField2.getText());
-        int minute2 = Integer.parseInt(jTextField4.getText());
+
+        var hour1 = Integer.parseInt(jTextField1.getText());
+        var hour2 = Integer.parseInt(jTextField3.getText());
+        var minute1 = Integer.parseInt(jTextField2.getText());
+        var minute2 = Integer.parseInt(jTextField4.getText());
         if (Bookutil.checkTimeValidity(hour1, minute1, hour2, minute2)) {
             System.out.println(hour1 + hour2 + minute1 + minute2);
             jDialog1.pack();
