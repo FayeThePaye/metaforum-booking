@@ -198,15 +198,19 @@ public class Floor1 extends javax.swing.JFrame {
         jToggleButton2.setText("-1");
 
         jButton15.setText("Book");
+        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton15.addActionListener(this::jButton15ActionPerformed);
 
         jButton16.setText("Book");
+        jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton16.addActionListener(this::jButton16ActionPerformed);
 
         jButton17.setText("Book");
+        jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton17.addActionListener(this::jButton17ActionPerformed);
 
         jButton18.setText("Book");
+        jButton18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton18.addActionListener(this::jButton18ActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
