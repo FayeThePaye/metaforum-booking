@@ -9,6 +9,9 @@ public class bookingTab extends javax.swing.JFrame {
     /**
      * Creates new form bookingTab
      */
+public bookingTab() {
+    this(0, 0, 0, 0); // Calls the 4-arg constructor with default zeroes
+}
     public bookingTab(int cap, int chair, int table, int roomType) {
         initComponents();
         capacity = cap;

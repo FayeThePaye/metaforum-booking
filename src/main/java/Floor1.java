@@ -224,6 +224,10 @@ public class Floor1 extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
+        CreateBooking CB = new CreateBooking();
+        CB.setVisible(true);
+        this.dispose();
+        
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
