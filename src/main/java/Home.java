@@ -1,5 +1,7 @@
 public class Home extends javax.swing.JFrame {
     
+
+    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Home.class.getName());
 
     /**
@@ -7,6 +9,7 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
     }
 
     /**
@@ -17,6 +20,7 @@ public class Home extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -28,57 +32,51 @@ public class Home extends javax.swing.JFrame {
 
         jPanel1.setBorder(new javax.swing.border.MatteBorder(null));
         jPanel1.setForeground(new java.awt.Color(204, 204, 255));
+        jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setFont(new java.awt.Font("Ravie", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("MetaForum Booking System");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(15, 16, 0, 0);
+        jPanel1.add(jLabel1, gridBagConstraints);
 
         jButton1.setFont(new java.awt.Font("Jokerman", 0, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 204, 0));
         jButton1.setText("Create Booking");
         jButton1.addActionListener(this::jButton1ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(124, 7, 0, 0);
+        jPanel1.add(jButton1, gridBagConstraints);
 
         jButton2.setFont(new java.awt.Font("Jokerman", 0, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 51, 51));
         jButton2.setText("Cancel Booking");
         jButton2.addActionListener(this::jButton2ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(124, 109, 0, 7);
+        jPanel1.add(jButton2, gridBagConstraints);
 
         jButton4.setFont(new java.awt.Font("Jokerman", 0, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(102, 102, 255));
         jButton4.setText("Map");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(60, 60, 60))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(300, 300, 300)
-                .addComponent(jButton4)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jLabel1)
-                .addGap(52, 52, 52)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addContainerGap(92, Short.MAX_VALUE))
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(35, 92, 27, 0);
+        jPanel1.add(jButton4, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,6 +111,10 @@ public class Home extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {                                  
+        this.setExtendedState(this.getExtendedState()|Home.MAXIMIZED_BOTH);
+    }   
     /**
      * @param args the command line arguments
      */
