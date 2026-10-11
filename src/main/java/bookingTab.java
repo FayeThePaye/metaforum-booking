@@ -23,15 +23,15 @@ public class bookingTab extends javax.swing.JFrame {
                 String time2 = String.format("%02d:%02d", appt.hour2, appt.minute2);
                 switch (count) {
                     case 0:
-                        jLabel4.setText("Student ID: " + appt.stuID +", Timeslot: " + time1 + " -- " + time2);
+                        jLabel4.setText("Student ID: " + appt.student.stuID +", Timeslot: " + time1 + " -- " + time2);
                         count++;
                         break;
                     case 1:
-                        jLabel5.setText("Student ID: " + appt.stuID + ", Timeslot: " + time1 + " -- " + time2);
+                        jLabel5.setText("Student ID: " + appt.student.stuID + ", Timeslot: " + time1 + " -- " + time2);
                         count++;
                         break;
                     case 2:
-                        jLabel6.setText("Student ID: " + appt.stuID + ", Timeslot: " + time1 + " -- " + time2);
+                        jLabel6.setText("Student ID: " + appt.student.stuID + ", Timeslot: " + time1 + " -- " + time2);
                         count++;
                         break;
                     default:
@@ -414,7 +414,7 @@ public class bookingTab extends javax.swing.JFrame {
             jDialog1.setLocationRelativeTo(null);
             jDialog1.setVisible(true);
             jLabel17.setText("Booking successful");
-            Appointment appointment = new Appointment(roomNum, hour1, minute1, hour2, minute2);
+            Appointment appointment = new Appointment(MFBook.currentUser, roomNum, hour1, minute1, hour2, minute2);
             MFBook.addAppt(appointment);
             refreshAppts();
         } else {
