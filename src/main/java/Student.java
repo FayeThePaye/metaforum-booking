@@ -1,7 +1,10 @@
+
+import java.util.ArrayList;
+
 public class Student {
     int stuID;
     String pswd;
-    Appointment[] appointments = new Appointment[3];
+    ArrayList<Appointment> appointments = new ArrayList<>();
     int count = 0;
     public Student(int stuID, String pswd) {
         this.stuID = stuID;
@@ -10,7 +13,7 @@ public class Student {
     
     public void addAppt (Appointment newAppt) {
         if (count < 3) {
-            this.appointments[count] = newAppt;
+            this.appointments.set(count, newAppt);
             count++;
         }
     }

@@ -11,10 +11,6 @@ public class bookingTab extends javax.swing.JFrame {
     boolean avail = true;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(bookingTab.class.getName());
 
-    /**
-     * Creates new form bookingTab
-     */
-    
     private void refreshAppts() {
         int count = 0;
         for (Appointment appt : MFBook.allAppts) {
@@ -416,6 +412,7 @@ public class bookingTab extends javax.swing.JFrame {
             jLabel17.setText("Booking successful");
             Appointment appointment = new Appointment(MFBook.currentUser, roomNum, hour1, minute1, hour2, minute2);
             MFBook.addAppt(appointment);
+            MFBook.currentUser.appointments.add(appointment);
             refreshAppts();
         } else {
             System.out.println("error");
