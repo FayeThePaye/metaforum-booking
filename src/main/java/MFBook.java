@@ -3,7 +3,8 @@ import java.util.ArrayList;
 
 public class MFBook {
     static Student currentUser;
-    ArrayList<Appointment> allAppts = new ArrayList<>();
+    static ArrayList<Student> students = new ArrayList<>();
+    static ArrayList<Appointment> allAppts = new ArrayList<>();
     
     public static boolean checkTimeValidity(int hour1, int minute1, int hour2, int minute2) {
         if (hour1 < 0 || hour2 < 0 || minute1 < 0 || minute2 < 0) {
@@ -35,23 +36,37 @@ public class MFBook {
             System.out.println("Booking start time is in the past!");
             return false;
         }
-        
+        for (Appointment appt : allAppts) {
+            int startA = hour1 * 60 + minute1;
+            int endA = hour2 * 60 + minute2;
+
+            int startB = appt.hour1 * 60 + appt.minute1;
+            int endB = appt.hour2 * 60 + appt.minute2;
+            if (startA < endB && startB < endA) {
+                return false;
+            }
+        }
         return true;
     }
     
-    public void randomAppts() {
-        int amount = (int) (Math.random() * 10);
-        for (int i = 0; i < amount; i++) {
-            int hour1 = (int) (Math.random() * 13) + 8;
-            int minute1 = (int) (Math.random() * 6) * 10;
-            int hour2 = hour1 + (int) (Math.random() * 2);
-            int minute2 = (int) (Math.random() * 6) * 10;
-            int roomNo = (int) (Math.random() * 14);
-            allAppts.add(new Appointment(roomNo, hour1, minute1, hour2, minute2));
-        }
+    public static void addAppt(Appointment appt) {
+        allAppts.add(appt);
     }
     
+//    public void randomAppts() {
+//        int amount = (int) (Math.random() * 10);
+//        for (int i = 0; i < amount; i++) {
+//            int hour1 = (int) (Math.random() * 13) + 8;
+//            int minute1 = (int) (Math.random() * 6) * 10;
+//            int hour2 = hour1 + (int) (Math.random() * 2);
+//            int minute2 = (int) (Math.random() * 6) * 10;
+//            int roomNo = (int) (Math.random() * 14);
+//            allAppts.add(new Appointment(roomNo, hour1, minute1, hour2, minute2));
+//        }
+//    }
+    
     public static void main(String args[]) {
-        
+        Login login = new Login();
+        login.setVisible(true);
     }
 }
