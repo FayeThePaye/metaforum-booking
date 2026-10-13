@@ -222,7 +222,7 @@ public class Floor1 extends javax.swing.JFrame {
         getContentPane().add(jToggleButton2, gridBagConstraints);
 
         jButton15.setText("Book");
-        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton15.addActionListener(this::jButton15ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -233,7 +233,7 @@ public class Floor1 extends javax.swing.JFrame {
         getContentPane().add(jButton15, gridBagConstraints);
 
         jButton16.setText("Book");
-        jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton16.addActionListener(this::jButton16ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -243,7 +243,7 @@ public class Floor1 extends javax.swing.JFrame {
         getContentPane().add(jButton16, gridBagConstraints);
 
         jButton17.setText("Book");
-        jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton17.addActionListener(this::jButton17ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -254,7 +254,7 @@ public class Floor1 extends javax.swing.JFrame {
         getContentPane().add(jButton17, gridBagConstraints);
 
         jButton18.setText("Book");
-        jButton18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton18.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton18.addActionListener(this::jButton18ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
