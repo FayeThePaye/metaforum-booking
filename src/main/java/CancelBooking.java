@@ -202,6 +202,7 @@ public class CancelBooking extends javax.swing.JFrame {
             MFBook.allAppts.remove(row);
         }
         refreshTable();
+        MFBook.saveApptToCSV();
         System.out.println("removed appointment");
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -10,7 +10,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
-        loadAccountsFromCSV();
+        
     }
     
     int stuID;
@@ -20,45 +20,6 @@ public class Login extends javax.swing.JFrame {
         
         jLabel4.setVisible(true);
     }
-    private void saveAccountToCSV(int id, String password) {
-    String filePath = "accounts.csv"; // Saves to the root folder of your NetBeans project
-    
-    // Using 'true' as the second parameter enables append mode
-    try (java.io.FileWriter fw = new java.io.FileWriter(filePath, true);
-         java.io.BufferedWriter bw = new java.io.BufferedWriter(fw);
-         java.io.PrintWriter pw = new java.io.PrintWriter(bw)) {
-        
-        // Write the ID and password separated by a comma
-        pw.println(id + "," + password);
-        
-    } catch (java.io.IOException e) {
-        System.err.println("Error saving account to CSV: " + e.getMessage());
-    }
-}
-    private void loadAccountsFromCSV() {
-    String filePath = "accounts.csv";
-    java.io.File file = new java.io.File(filePath);
-    
-    if (!file.exists()) {
-        return; // No file exists yet, nothing to load
-    }
-    
-    try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader(file))) {
-        String line;
-        while ((line = br.readLine()) != null) {
-            String[] data = line.split(",");
-            if (data.length == 2) {
-                int id = Integer.parseInt(data[0].trim());
-                String password = data[1].trim();
-                
-                // Add the loaded data back into your runtime list
-                MFBook.students.add(new Student(id, password));
-            }
-        }
-    } catch (Exception e) {
-        System.err.println("Error loading accounts from CSV: " + e.getMessage());
-    }
-}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -213,9 +174,7 @@ public class Login extends javax.swing.JFrame {
     Student student = new Student(stuID, pswd);
     MFBook.students.add(student);
     
-    // --- ADD THIS LINE TO SAVE TO CSV ---
-    saveAccountToCSV(stuID, pswd);
-    // ------------------------------------
+    MFBook.saveAccountToCSV(stuID, pswd);
     
     MFBook.currentUser = student;
     Home home = new Home();
