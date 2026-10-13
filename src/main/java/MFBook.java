@@ -1,4 +1,5 @@
 import java.time.LocalTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class MFBook {
@@ -6,7 +7,7 @@ public class MFBook {
     static ArrayList<Student> students = new ArrayList<>();
     static ArrayList<Appointment> allAppts = new ArrayList<>();
     
-    public static boolean checkTimeValidity(int hour1, int minute1, int hour2, int minute2) {
+    public static boolean checkTimeValidity(int date, int hour1, int minute1, int hour2, int minute2) {
         if (hour1 < 0 || hour2 < 0 || minute1 < 0 || minute2 < 0) {
             System.out.println("less than 0");
             return false;
@@ -29,13 +30,13 @@ public class MFBook {
         LocalTime now = LocalTime.now();
         int currentHour = now.getHour();
         int currentMinute = now.getMinute();
-        if (hour1 < currentHour) {
-            System.out.println("Booking start time is in the past!");
-            return false;
-        }else if (hour1 == currentHour && minute1 < currentMinute) {
-            System.out.println("Booking start time is in the past!");
-            return false;
-        }
+//        if (hour1 < currentHour) {
+//            System.out.println("Booking start time is in the past!");
+//            return false;
+//        }else if (hour1 == currentHour && minute1 < currentMinute) {
+//            System.out.println("Booking start time is in the past!");
+//            return false;
+//        }
         for (Appointment appt : allAppts) {
             int startA = hour1 * 60 + minute1;
             int endA = hour2 * 60 + minute2;
@@ -43,9 +44,17 @@ public class MFBook {
             int startB = appt.hour1 * 60 + appt.minute1;
             int endB = appt.hour2 * 60 + appt.minute2;
             if (startA < endB && startB < endA) {
+                System.out.println("overlap");
                 return false;
             }
         }
+//        LocalDate dayObj = LocalDate.now();
+//        int day = dayObj.getDayOfMonth();
+//        if (date <  day) {
+//            System.out.println("date in past");
+//            return false;
+//        }
+        
         return true;
     }
     
