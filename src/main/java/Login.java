@@ -166,20 +166,33 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
-    stuID = Integer.parseInt(jTextField1.getText());
-    pswd = jPasswordField1.getText();
-    jLabel4.setVisible(false);
-    System.out.println(stuID + pswd);
-    
-    Student student = new Student(stuID, pswd);
-    MFBook.students.add(student);
-    
-    MFBook.saveAccountToCSV(stuID, pswd);
-    
-    MFBook.currentUser = student;
-    Home home = new Home();
-    home.setVisible(true);
-    this.dispose();
+        stuID = Integer.parseInt(jTextField1.getText());
+        pswd = jPasswordField1.getText();
+        boolean exists = false;
+
+        for (Student student : MFBook.students) {
+            if (student.stuID == stuID) {
+                exists = true;
+            }
+        }
+
+        if (!exists) {
+            System.out.println("account created");
+            jLabel4.setVisible(false);
+            System.out.println(stuID + pswd);
+
+            Student student = new Student(stuID, pswd);
+            MFBook.students.add(student);
+
+            MFBook.saveAccountToCSV(stuID, pswd);
+
+            MFBook.currentUser = student;
+            Home home = new Home();
+            home.setVisible(true);
+            this.dispose();
+        } else {
+            System.out.println("account already exists");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

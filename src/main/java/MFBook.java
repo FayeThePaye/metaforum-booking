@@ -143,8 +143,7 @@ public class MFBook {
     
     //used when new account created (TODO: cant make duplicate accounts)
     public static void saveAccountToCSV(int id, String password) {
-    String filePath = "accounts.csv"; // Saves to the root folder of your NetBeans project
-    
+        String filePath = "accounts.csv"; // Saves to the root folder of your NetBeans project
         // Using 'true' as the second parameter enables append mode
         try (java.io.FileWriter fw = new java.io.FileWriter(filePath, true);
              java.io.BufferedWriter bw = new java.io.BufferedWriter(fw);
@@ -152,6 +151,7 @@ public class MFBook {
 
             // Write the ID and password separated by a comma
             pw.println(id + "," + password);
+            System.out.println("account saved to ");
 
         } catch (java.io.IOException e) {
             System.err.println("Error saving account to CSV: " + e.getMessage());
