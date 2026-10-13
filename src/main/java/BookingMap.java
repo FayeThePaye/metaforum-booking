@@ -21,6 +21,7 @@ public class BookingMap extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jToggleButton3 = new javax.swing.JToggleButton();
         jToggleButton1 = new javax.swing.JToggleButton();
@@ -47,55 +48,165 @@ public class BookingMap extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(java.awt.Color.green);
+        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jToggleButton1.setBackground(new java.awt.Color(102, 102, 102));
         jToggleButton1.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 18;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(3, 0, 0, 0);
+        getContentPane().add(jToggleButton1, gridBagConstraints);
 
         jToggleButton2.setText("-1");
         jToggleButton2.addActionListener(this::jToggleButton2ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 0, 0, 0);
+        getContentPane().add(jToggleButton2, gridBagConstraints);
 
         jButton1.setText("Book");
         jButton1.addActionListener(this::jButton1ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 40, 0, 6);
+        getContentPane().add(jButton1, gridBagConstraints);
 
         jButton2.setText("Book");
         jButton2.addActionListener(this::jButton2ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(37, 40, 0, 6);
+        getContentPane().add(jButton2, gridBagConstraints);
 
         jButton3.setText("Book");
         jButton3.addActionListener(this::jButton3ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(15, 40, 0, 6);
+        getContentPane().add(jButton3, gridBagConstraints);
 
         jButton4.setText("Book");
         jButton4.addActionListener(this::jButton4ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(24, 40, 0, 6);
+        getContentPane().add(jButton4, gridBagConstraints);
 
         jButton5.setText("Book");
         jButton5.addActionListener(this::jButton5ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(15, 40, 0, 6);
+        getContentPane().add(jButton5, gridBagConstraints);
 
         jButton6.setText("Book");
         jButton6.addActionListener(this::jButton6ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(25, 40, 0, 6);
+        getContentPane().add(jButton6, gridBagConstraints);
 
         jButton7.setText("Book");
         jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton7.addActionListener(this::jButton7ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 1, 0, 0);
+        getContentPane().add(jButton7, gridBagConstraints);
 
         jButton8.setText("Book");
         jButton8.addActionListener(this::jButton8ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(33, 1, 0, 0);
+        getContentPane().add(jButton8, gridBagConstraints);
 
         jButton9.setText("Book");
         jButton9.addActionListener(this::jButton9ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(36, 1, 0, 0);
+        getContentPane().add(jButton9, gridBagConstraints);
 
         jButton10.setText("Book");
         jButton10.addActionListener(this::jButton10ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 1, 0, 0);
+        getContentPane().add(jButton10, gridBagConstraints);
 
         jButton11.setText("Book");
         jButton11.addActionListener(this::jButton11ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(28, 1, 0, 0);
+        getContentPane().add(jButton11, gridBagConstraints);
 
         jButton12.setText("Book");
         jButton12.addActionListener(this::jButton12ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(32, 1, 0, 0);
+        getContentPane().add(jButton12, gridBagConstraints);
 
         jButton13.setText("Book");
         jButton13.addActionListener(this::jButton13ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 1, 0, 0);
+        getContentPane().add(jButton13, gridBagConstraints);
 
         jButton14.setText("Book");
         jButton14.addActionListener(this::jButton14ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(26, 1, 0, 0);
+        getContentPane().add(jButton14, gridBagConstraints);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MetaMap1.png"))); // NOI18N
         jLabel1.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -103,8 +214,22 @@ public class BookingMap extends javax.swing.JFrame {
                 jLabel1ComponentResized(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 17;
+        gridBagConstraints.ipady = 71;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 9, 0, 0);
+        getContentPane().add(jLabel1, gridBagConstraints);
 
         jLabel2.setText("jLabel2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 6, 0, 0);
+        getContentPane().add(jLabel2, gridBagConstraints);
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel18.setText("Home");
@@ -114,94 +239,13 @@ public class BookingMap extends javax.swing.JFrame {
                 jLabel18MouseClicked(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton2))
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7)
-                            .addComponent(jButton8)
-                            .addComponent(jButton9)
-                            .addComponent(jButton10)
-                            .addComponent(jButton11)
-                            .addComponent(jButton12)
-                            .addComponent(jButton13)
-                            .addComponent(jButton14))
-                        .addGap(9, 9, 9)
-                        .addComponent(jLabel1)
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1)
-                                    .addComponent(jButton2)
-                                    .addComponent(jButton3)
-                                    .addComponent(jButton4)
-                                    .addComponent(jButton5)
-                                    .addComponent(jButton6)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel18)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jToggleButton1)
-                        .addGap(6, 6, 6)
-                        .addComponent(jToggleButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton7)
-                        .addGap(38, 38, 38)
-                        .addComponent(jButton8)
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton9)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton10)
-                        .addGap(28, 28, 28)
-                        .addComponent(jButton11)
-                        .addGap(32, 32, 32)
-                        .addComponent(jButton12)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton13)
-                        .addGap(26, 26, 26)
-                        .addComponent(jButton14))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2)
-                        .addGap(37, 37, 37)
-                        .addComponent(jButton1)
-                        .addGap(37, 37, 37)
-                        .addComponent(jButton2)
-                        .addGap(74, 74, 74)
-                        .addComponent(jButton3)
-                        .addGap(27, 27, 27)
-                        .addComponent(jButton4)
-                        .addGap(74, 74, 74)
-                        .addComponent(jButton5)
-                        .addGap(28, 28, 28)
-                        .addComponent(jButton6)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel18)
-                .addGap(27, 27, 27))
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 17;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 39, 27, 0);
+        getContentPane().add(jLabel18, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

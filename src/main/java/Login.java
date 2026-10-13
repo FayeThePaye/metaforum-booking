@@ -9,14 +9,56 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
+        loadAccountsFromCSV();
     }
     
     int stuID;
     String pswd;
     
     public void accountNE() {
+        
         jLabel4.setVisible(true);
     }
+    private void saveAccountToCSV(int id, String password) {
+    String filePath = "accounts.csv"; // Saves to the root folder of your NetBeans project
+    
+    // Using 'true' as the second parameter enables append mode
+    try (java.io.FileWriter fw = new java.io.FileWriter(filePath, true);
+         java.io.BufferedWriter bw = new java.io.BufferedWriter(fw);
+         java.io.PrintWriter pw = new java.io.PrintWriter(bw)) {
+        
+        // Write the ID and password separated by a comma
+        pw.println(id + "," + password);
+        
+    } catch (java.io.IOException e) {
+        System.err.println("Error saving account to CSV: " + e.getMessage());
+    }
+}
+    private void loadAccountsFromCSV() {
+    String filePath = "accounts.csv";
+    java.io.File file = new java.io.File(filePath);
+    
+    if (!file.exists()) {
+        return; // No file exists yet, nothing to load
+    }
+    
+    try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader(file))) {
+        String line;
+        while ((line = br.readLine()) != null) {
+            String[] data = line.split(",");
+            if (data.length == 2) {
+                int id = Integer.parseInt(data[0].trim());
+                String password = data[1].trim();
+                
+                // Add the loaded data back into your runtime list
+                MFBook.students.add(new Student(id, password));
+            }
+        }
+    } catch (Exception e) {
+        System.err.println("Error loading accounts from CSV: " + e.getMessage());
+    }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,6 +68,7 @@ public class Login extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -41,93 +84,112 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setBorder(new javax.swing.border.MatteBorder(null));
         jPanel1.setForeground(new java.awt.Color(204, 204, 255));
+        jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setFont(new java.awt.Font("Ravie", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Ravie", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("MetaForum Booking System");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(33, 7, 0, 50);
+        jPanel1.add(jLabel1, gridBagConstraints);
 
         jTextField1.addActionListener(this::jTextField1ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 82;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(146, 42, 0, 0);
+        jPanel1.add(jTextField1, gridBagConstraints);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Student ID:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 54;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(142, 291, 0, 0);
+        jPanel1.add(jLabel2, gridBagConstraints);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setText("Password:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 62;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(53, 291, 0, 0);
+        jPanel1.add(jLabel3, gridBagConstraints);
 
         jPasswordField1.addActionListener(this::jPasswordField1ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 82;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(57, 42, 0, 0);
+        jPanel1.add(jPasswordField1, gridBagConstraints);
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton1.setText("Login");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(this::jButton1ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.ipadx = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(64, 291, 0, 0);
+        jPanel1.add(jButton1, gridBagConstraints);
 
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton2.setText("New Account");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(this::jButton2ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(64, 28, 0, 0);
+        jPanel1.add(jButton2, gridBagConstraints);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 51, 51));
         jLabel4.setText(" This account doesn't exist / password error");
         jLabel4.setVisible(false);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(172, 172, 172)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPasswordField1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(jLabel4)))
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jLabel1)
-                .addGap(68, 68, 68)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipady = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 327, 17, 0);
+        jPanel1.add(jLabel4, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(68, 68, 68)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -142,16 +204,23 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        stuID = Integer.parseInt(jTextField1.getText());
-        pswd = jPasswordField1.getText();
-        jLabel4.setVisible(false);
-        System.out.println(stuID + pswd);
-        Student student = new Student(stuID, pswd);
-        MFBook.students.add(student);
-        MFBook.currentUser = student;
-        Home home = new Home();
-        home.setVisible(true);
-        this.dispose();
+        
+    stuID = Integer.parseInt(jTextField1.getText());
+    pswd = jPasswordField1.getText();
+    jLabel4.setVisible(false);
+    System.out.println(stuID + pswd);
+    
+    Student student = new Student(stuID, pswd);
+    MFBook.students.add(student);
+    
+    // --- ADD THIS LINE TO SAVE TO CSV ---
+    saveAccountToCSV(stuID, pswd);
+    // ------------------------------------
+    
+    MFBook.currentUser = student;
+    Home home = new Home();
+    home.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
