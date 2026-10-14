@@ -29,7 +29,6 @@ public class Home extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -43,60 +42,61 @@ public class Home extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(204, 204, 255));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setFont(new java.awt.Font("Ravie", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 60)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("MetaForum Booking System");
+        jLabel1.setFocusable(false);
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(16, 17, 0, 20);
+        gridBagConstraints.insets = new java.awt.Insets(73, 93, 0, 0);
         jPanel1.add(jLabel1, gridBagConstraints);
 
-        jButton1.setFont(new java.awt.Font("Jokerman", 0, 24)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Sans Unicode", 1, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 204, 0));
         jButton1.setText("Create Booking");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(this::jButton1ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 36;
+        gridBagConstraints.ipady = 26;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(72, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(147, 60, 0, 0);
         jPanel1.add(jButton1, gridBagConstraints);
 
-        jButton2.setFont(new java.awt.Font("Jokerman", 0, 24)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Lucida Sans Unicode", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 51, 51));
         jButton2.setText("Cancel Booking");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(this::jButton2ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 32;
+        gridBagConstraints.ipady = 26;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(72, 27, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(147, 34, 0, 43);
         jPanel1.add(jButton2, gridBagConstraints);
 
-        jButton4.setFont(new java.awt.Font("Jokerman", 0, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 102, 102));
+        jButton4.setFont(new java.awt.Font("Lucida Sans", 1, 24)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 51, 51));
         jButton4.setText("Log Out");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(this::jButton4ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(30, 32, 35, 0);
-        jPanel1.add(jButton4, gridBagConstraints);
-
-        jButton5.setFont(new java.awt.Font("Jokerman", 0, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(102, 102, 255));
-        jButton5.setText("Map");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 46;
+        gridBagConstraints.ipady = 25;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 51, 0, 0);
-        jPanel1.add(jButton5, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(87, 38, 54, 0);
+        jPanel1.add(jButton4, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -171,7 +171,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;

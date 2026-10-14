@@ -209,5 +209,10 @@ public class MFBook {
         restoreAppts2Stu();
         Login login = new Login();
         login.setVisible(true);
+        try {
+    javax.swing.UIManager.setLookAndFeel(new com.formdev.flatlaf.FlatLightLaf());
+} catch(Exception ex) {
+    System.err.println("Failed to initialize LaF");
+}
     }
 }
