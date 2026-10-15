@@ -39,6 +39,7 @@ public class bookingTab extends javax.swing.JFrame {
     
     public bookingTab(int roomNum, int cap, int chair, int table, int roomType) {
         initComponents();
+        jSpinner1.setModel(new javax.swing.SpinnerDateModel());
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
         this.roomNum = roomNum;
         capacity = cap;
@@ -348,10 +349,16 @@ public class bookingTab extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(24, 21, 0, 0);
         jPanel1.add(jLabel21, gridBagConstraints);
 
-        jSpinner1.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), new java.util.Date(), null, java.util.Calendar.DAY_OF_MONTH));
+        jSpinner1.setModel(new javax.swing.SpinnerDateModel());
+        jSpinner1.setToolTipText("");
         jSpinner1.setEditor(new javax.swing.JSpinner.DateEditor(jSpinner1, "dd/MM/yyyy"));
         javax.swing.JSpinner.DateEditor editor = (javax.swing.JSpinner.DateEditor) jSpinner1.getEditor();
         editor.getFormat().setLenient(false);
+        jSpinner1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jSpinner1MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
@@ -509,6 +516,10 @@ public class bookingTab extends javax.swing.JFrame {
         BM.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void jSpinner1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSpinner1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner1MouseClicked
 
     /**
      * @param args the command line arguments

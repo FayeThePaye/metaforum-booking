@@ -350,9 +350,13 @@
             <Component class="javax.swing.JSpinner" name="jSpinner1">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-                  <SpinnerModel initial="now" minimum="now" stepSize="5" type="date"/>
+                  <SpinnerModel initial="now" stepSize="5" type="date"/>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jSpinner1MouseClicked"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jSpinner1.setEditor(new javax.swing.JSpinner.DateEditor(jSpinner1, &quot;dd/MM/yyyy&quot;));&#xa;javax.swing.JSpinner.DateEditor editor = (javax.swing.JSpinner.DateEditor) jSpinner1.getEditor();&#xa;editor.getFormat().setLenient(false);"/>
               </AuxValues>
