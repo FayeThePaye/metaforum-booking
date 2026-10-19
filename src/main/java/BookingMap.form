@@ -69,7 +69,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -85,7 +85,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -101,7 +101,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -117,7 +117,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -133,7 +133,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -149,7 +149,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -165,7 +165,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -181,7 +181,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -197,7 +197,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -213,7 +213,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -229,7 +229,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -245,7 +245,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -261,7 +261,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -277,7 +277,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Book"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>
@@ -321,7 +321,7 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Home"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
         </Property>
       </Properties>
       <Events>

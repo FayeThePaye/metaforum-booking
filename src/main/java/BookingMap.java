@@ -74,7 +74,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jToggleButton2, gridBagConstraints);
 
         jButton1.setText("Book");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(this::jButton1ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -86,7 +86,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton1, gridBagConstraints);
 
         jButton2.setText("Book");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.addActionListener(this::jButton2ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -98,7 +98,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton2, gridBagConstraints);
 
         jButton3.setText("Book");
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton3.addActionListener(this::jButton3ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -109,7 +109,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton3, gridBagConstraints);
 
         jButton4.setText("Book");
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton4.addActionListener(this::jButton4ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -120,7 +120,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton4, gridBagConstraints);
 
         jButton5.setText("Book");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton5.addActionListener(this::jButton5ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -131,7 +131,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton5, gridBagConstraints);
 
         jButton6.setText("Book");
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton6.addActionListener(this::jButton6ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -142,7 +142,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton6, gridBagConstraints);
 
         jButton7.setText("Book");
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton7.addActionListener(this::jButton7ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -152,7 +152,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton7, gridBagConstraints);
 
         jButton8.setText("Book");
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton8.addActionListener(this::jButton8ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -162,7 +162,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton8, gridBagConstraints);
 
         jButton9.setText("Book");
-        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton9.addActionListener(this::jButton9ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -172,7 +172,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton9, gridBagConstraints);
 
         jButton10.setText("Book");
-        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton10.addActionListener(this::jButton10ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -183,7 +183,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton10, gridBagConstraints);
 
         jButton11.setText("Book");
-        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton11.addActionListener(this::jButton11ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -194,7 +194,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton11, gridBagConstraints);
 
         jButton12.setText("Book");
-        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton12.addActionListener(this::jButton12ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -204,7 +204,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton12, gridBagConstraints);
 
         jButton13.setText("Book");
-        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton13.addActionListener(this::jButton13ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -215,7 +215,7 @@ public class BookingMap extends javax.swing.JFrame {
         getContentPane().add(jButton13, gridBagConstraints);
 
         jButton14.setText("Book");
-        jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton14.addActionListener(this::jButton14ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -251,7 +251,7 @@ public class BookingMap extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel18.setText("Home");
-        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel18MouseClicked(evt);
