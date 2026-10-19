@@ -55,7 +55,7 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(36, 68, 0, 89);
+        gridBagConstraints.insets = new java.awt.Insets(37, 69, 0, 90);
         jPanel1.add(jLabel1, gridBagConstraints);
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -78,7 +78,7 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 27;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(86, 278, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(86, 279, 0, 0);
         jPanel1.add(jLabel2, gridBagConstraints);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -89,7 +89,7 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 46;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(30, 278, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(30, 279, 0, 0);
         jPanel1.add(jLabel3, gridBagConstraints);
 
         jPasswordField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -114,7 +114,7 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.gridy = 4;
         gridBagConstraints.ipadx = 52;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(72, 300, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(72, 301, 0, 0);
         jPanel1.add(jButton1, gridBagConstraints);
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -132,6 +132,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 51, 51));
         jLabel4.setText(" This account doesn't exist / password error");
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel4.setVisible(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -139,7 +140,7 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 337, 34, 0);
+        gridBagConstraints.insets = new java.awt.Insets(46, 337, 7, 0);
         jPanel1.add(jLabel4, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -194,7 +195,9 @@ public class Login extends javax.swing.JFrame {
             home.setVisible(true);
             this.dispose();
         } else {
-            System.out.println("account already exists");
+        System.out.println("account already exists");
+        jLabel4.setText(" This account already exists!");
+        jLabel4.setVisible(true);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

@@ -386,7 +386,11 @@
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new javax.swing.SpinnerDateModel(today, today, null, java.util.Calendar.DAY_OF_MONTH)" type="code"/>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jSpinner1MouseClicked"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jSpinner1.setEditor(new javax.swing.JSpinner.DateEditor(jSpinner1, &quot;dd/MM/yyyy&quot;));&#xa;javax.swing.JSpinner.DateEditor editor = (javax.swing.JSpinner.DateEditor) jSpinner1.getEditor();&#xa;editor.getFormat().setLenient(false);"/>
                 <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Calendar cal = Calendar.getInstance();&#xa;cal.set(Calendar.HOUR_OF_DAY, 0);&#xa;cal.set(Calendar.MINUTE, 0);&#xa;cal.set(Calendar.SECOND, 0);&#xa;cal.set(Calendar.MILLISECOND, 0);&#xa;Date today = cal.getTime();"/>

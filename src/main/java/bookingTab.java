@@ -48,6 +48,7 @@ public class bookingTab extends javax.swing.JFrame {
     
     public bookingTab(int roomNum, int cap, int chair, int table, int roomType) {
         initComponents();
+        jSpinner1.setModel(new javax.swing.SpinnerDateModel());
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
         this.roomNum = roomNum;
         capacity = cap;
@@ -470,6 +471,10 @@ public class bookingTab extends javax.swing.JFrame {
         BM.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void jSpinner1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSpinner1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner1MouseClicked
 
     /**
      * @param args the command line arguments
