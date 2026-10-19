@@ -19,7 +19,7 @@ public class CancelBooking extends javax.swing.JFrame {
         
         for (Appointment appt : MFBook.currentUser.appointments) {
             model.addRow(new Object[] {
-                "Room " + appt.roomNo + ": " +
+                "Room " + appt.roomNo + ": " + appt.dateStr + " " +
                 String.format("%02d:%02d", appt.hour1, appt.minute1) +
                 " - " +
                 String.format("%02d:%02d", appt.hour2, appt.minute2)
