@@ -135,8 +135,6 @@ public class bookingTab extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setLayout(new java.awt.GridBagLayout());
-
         jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jLabel1.setText("Availability:");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -216,15 +214,6 @@ public class bookingTab extends javax.swing.JFrame {
         jTextField1.setText("00");
         jTextField1.setPreferredSize(new java.awt.Dimension(64, 30));
         jTextField1.addActionListener(this::jTextField1ActionPerformed);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipady = -8;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(31, 32, 0, 0);
-        jPanel1.add(jTextField1, gridBagConstraints);
 
         jButton1.setText("Confirm");
         jButton1.addActionListener(this::jButton1ActionPerformed);
