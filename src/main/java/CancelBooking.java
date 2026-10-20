@@ -1,32 +1,33 @@
+
 import javax.swing.table.DefaultTableModel;
 
 public class CancelBooking extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CancelBooking.class.getName());
+
+    private static final java.util.logging.Logger LOGGER = 
+            java.util.logging.Logger.getLogger(CancelBooking.class.getName());
 
     /**
      * Creates new form CancelBooking
      */
     public CancelBooking() {
         initComponents();
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         refreshTable();
     }
-    
+
     private void refreshTable() {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setNumRows(0);
-        
+
         for (Appointment appt : MFBook.currentUser.appointments) {
-            model.addRow(new Object[] {
-                "Room " + appt.roomNo + ": " + appt.dateStr + " " +
-                String.format("%02d:%02d", appt.hour1, appt.minute1) +
-                " - " +
-                String.format("%02d:%02d", appt.hour2, appt.minute2)
+            model.addRow(new Object[]{
+                            "Room " + appt.roomNo + ": " + appt.dateStr + " "
+                            + String.format("%02d:%02d", appt.hour1, appt.minute1)
+                            + " - "
+                            + String.format("%02d:%02d", appt.hour2, appt.minute2)
             });
         }
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -185,20 +186,20 @@ public class CancelBooking extends javax.swing.JFrame {
 
     private void jLabel6ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel6ComponentShown
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jLabel6ComponentShown
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
-        Home H = new Home();
-        H.setVisible(true);
+        Home home = new Home();
+        home.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
-        BookingMap BM = new BookingMap();
-        BM.setVisible(true);
+        BookingMap bookingMap = new BookingMap();
+        bookingMap.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
 
@@ -230,8 +231,11 @@ public class CancelBooking extends javax.swing.JFrame {
                 }
             }
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
+            LOGGER.log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

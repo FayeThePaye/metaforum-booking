@@ -1,16 +1,18 @@
+
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
 public class MFBook {
+
     static Student currentUser;
     static ArrayList<Student> students = new ArrayList<>();
     static ArrayList<Appointment> allAppts = new ArrayList<>();
-    
-    public static boolean checkTimeValidity(int roomNo, Date date, int hour1, int minute1, int hour2, int minute2) {
+
+    public static boolean checkTimeValidity(int roomNo, Date date, 
+            int hour1, int minute1, int hour2, int minute2) {
         Calendar cal = Calendar.getInstance();
         Calendar cal1 = Calendar.getInstance();
         cal1.setTime(date);
@@ -33,12 +35,12 @@ public class MFBook {
             if (hour1 < currentHour) {
                 System.out.println("Booking start time is in the past!");
                 return false;
-            }else if (hour1 == currentHour && minute1 < currentMinute) {
+            } else if (hour1 == currentHour && minute1 < currentMinute) {
                 System.out.println("Booking start time is in the past!");
                 return false;
             }
         }
-        
+
         if (hour1 < 0 || hour2 < 0 || minute1 < 0 || minute2 < 0) {
             System.out.println("less than 0");
             return false;
@@ -51,13 +53,13 @@ public class MFBook {
         } else if (minute1 > 59 || minute2 > 59) {
             System.out.println("case 4");
             return false;
-        } else if (hour1 > 21 || hour2 > 21 ) {
+        } else if (hour1 > 21 || hour2 > 21) {
             System.out.println("case 5");
             return false;
         } else if (hour1 < 8 || hour2 < 8) {
             System.out.println("case 6");
             return false;
-        } 
+        }
         int start = hour1 * 60 + minute1;
         int end = hour2 * 60 + minute2;
         if (end - start > 120) {
@@ -69,52 +71,54 @@ public class MFBook {
 
             int startB = appt.hour1 * 60 + appt.minute1;
             int endB = appt.hour2 * 60 + appt.minute2;
-            if (appt.roomNo == roomNo && appt.dateStr.equals(new SimpleDateFormat("dd/MM/yyyy").format(date)) && startA < endB && startB < endA) {
+            if (appt.roomNo == roomNo && appt.dateStr.equals(
+                    new SimpleDateFormat("dd/MM/yyyy").format(date)) 
+                    && startA < endB && startB < endA) {
                 System.out.println("overlap");
                 return false;
             }
         }
-        
+
         return true;
     }
-    
+
     public static void addAppt(Appointment appt) {
         allAppts.add(appt);
     }
-    
+
     //₊˚ ✧ ━━━━⊱⋆⊰━━━━ ✧ ₊˚
     //CSV file management (unclean code)
     //saveappt happens when: 1. new appt created 2. appt cancelled
     public static void saveApptToCSV() {
         String filePath = "appts.csv";
 
-        try (java.io.PrintWriter pw =
-                new java.io.PrintWriter(
-                    new java.io.FileWriter(filePath, false))) {
+        try (java.io.PrintWriter pw
+                = new java.io.PrintWriter(
+                        new java.io.FileWriter(filePath, false))) {
 
             for (Appointment appt : allAppts) {
                 pw.println(
-                    appt.roomNo + "," +
-                    appt.student.stuID + "," +
-                    appt.dateStr + "," +
-                    appt.hour1 + "," +
-                    appt.minute1 + "," +
-                    appt.hour2 + "," +
-                    appt.minute2
+                        appt.roomNo + ","
+                        + appt.student.stuID + ","
+                        + appt.dateStr + ","
+                        + appt.hour1 + ","
+                        + appt.minute1 + ","
+                        + appt.hour2 + ","
+                        + appt.minute2
                 );
             }
 
         } catch (java.io.IOException e) {
             System.err.println(
-                "Error saving appointments: " + e.getMessage()
+                    "Error saving appointments: " + e.getMessage()
             );
         }
     }
-    
+
     //loadappt happens when MFBook (main) is ran
     public static void loadApptFromCSV() {
-    String filePath = "appts.csv";
-    java.io.File file = new java.io.File(filePath);
+        String filePath = "appts.csv";
+        java.io.File file = new java.io.File(filePath);
 
         if (!file.exists()) {
             return;
@@ -124,8 +128,8 @@ public class MFBook {
         for (Student student : MFBook.students) {
             student.appointments.clear();
         }
-        try (java.io.BufferedReader br =
-                new java.io.BufferedReader(new java.io.FileReader(file))) {
+        try (java.io.BufferedReader br
+                = new java.io.BufferedReader(new java.io.FileReader(file))) {
 
             String line;
             while ((line = br.readLine()) != null) {
@@ -144,8 +148,8 @@ public class MFBook {
                     for (Student student : MFBook.students) {
                         if (student.stuID == studentID) {
                             Appointment appt = new Appointment(
-                                student, roomNo, dateStr,
-                                hour1, minute1, hour2, minute2
+                                    student, roomNo, dateStr,
+                                    hour1, minute1, hour2, minute2
                             );
                             MFBook.allAppts.add(appt);
                             student.appointments.add(appt);
@@ -157,35 +161,31 @@ public class MFBook {
 
         } catch (Exception e) {
             System.err.println(
-                "Error loading appointments: " + e.getMessage()
+                    "Error loading appointments: " + e.getMessage()
             );
         }
     }
-    
-    //used when new account created (TODO: cant make duplicate accounts)
-    public static void saveAccountToCSV(int id, String password) {
-        String filePath = "accounts.csv"; // Saves to the root folder of your NetBeans project
-        // Using 'true' as the second parameter enables append mode
-        try (java.io.FileWriter fw = new java.io.FileWriter(filePath, true);
-             java.io.BufferedWriter bw = new java.io.BufferedWriter(fw);
-             java.io.PrintWriter pw = new java.io.PrintWriter(bw)) {
 
-            // Write the ID and password separated by a comma
+    //used when new account created (todo: cant make duplicate accounts)
+    public static void saveAccountToCSV(int id, String password) {
+        String filePath = "accounts.csv";
+        try (java.io.FileWriter fw = new java.io.FileWriter(filePath, true); 
+                java.io.BufferedWriter bw = new java.io.BufferedWriter(fw); 
+                        java.io.PrintWriter pw = new java.io.PrintWriter(bw)) {
             pw.println(id + "," + password);
             System.out.println("account saved to ");
-
         } catch (java.io.IOException e) {
             System.err.println("Error saving account to CSV: " + e.getMessage());
         }
     }
-    
+
     //used when MFBOOk is ran main
     private static void loadAccountsFromCSV() {
-    String filePath = "accounts.csv";
-    java.io.File file = new java.io.File(filePath);
-    
+        String filePath = "accounts.csv";
+        java.io.File file = new java.io.File(filePath);
+
         if (!file.exists()) {
-            return; // No file exists yet, nothing to load
+            return; 
         }
 
         try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader(file))) {
@@ -195,8 +195,6 @@ public class MFBook {
                 if (data.length == 2) {
                     int id = Integer.parseInt(data[0].trim());
                     String password = data[1].trim();
-
-                    // Add the loaded data back into your runtime list
                     MFBook.students.add(new Student(id, password));
                 }
             }
@@ -204,36 +202,37 @@ public class MFBook {
             System.err.println("Error loading accounts from CSV: " + e.getMessage());
         }
     }
-    
-    //used alongside load account from CSV because to restore Appointments arraylist after initialization (since not in csv file)
+
+    //used alongside load account from CSV because to restore Appointments 
+    //arraylist after initialization (since not in csv file)
     public static void restoreAppts2Stu() {
 
-    for (Student student : MFBook.students) {
-        student.appointments.clear();
-    }
-
-    for (Appointment appt : MFBook.allAppts) {
         for (Student student : MFBook.students) {
-            if (student.stuID == appt.student.stuID) {
-                student.appointments.add(appt);
-                break;
+            student.appointments.clear();
+        }
+
+        for (Appointment appt : MFBook.allAppts) {
+            for (Student student : MFBook.students) {
+                if (student.stuID == appt.student.stuID) {
+                    student.appointments.add(appt);
+                    break;
+                }
             }
         }
     }
-}
     //₊˚ ✧ ━━━━⊱⋆⊰━━━━ ✧ ₊˚
-    
-    
+
     public static void main(String args[]) {
         loadAccountsFromCSV();
         loadApptFromCSV();
         restoreAppts2Stu();
+        try {
+            javax.swing.UIManager.setLookAndFeel(
+                    new com.formdev.flatlaf.FlatLightLaf());
+        } catch (Exception ex) {
+            System.err.println("Failed to initialize LaF");
+        }
         Login login = new Login();
         login.setVisible(true);
-        try {
-    javax.swing.UIManager.setLookAndFeel(new com.formdev.flatlaf.FlatLightLaf());
-} catch(Exception ex) {
-    System.err.println("Failed to initialize LaF");
-}
     }
 }

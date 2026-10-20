@@ -2,7 +2,8 @@ import java.util.ArrayList;
 
 public class Login extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
+    private static final java.util.logging.Logger LOGGER = 
+            java.util.logging.Logger.getLogger(Login.class.getName());
 
     /**
      * Creates new form NewJFrame
@@ -195,9 +196,9 @@ public class Login extends javax.swing.JFrame {
             home.setVisible(true);
             this.dispose();
         } else {
-        System.out.println("account already exists");
-        jLabel4.setText(" This account already exists!");
-        jLabel4.setVisible(true);
+            System.out.println("account already exists");
+            jLabel4.setText(" This account already exists!");
+            jLabel4.setVisible(true);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -211,7 +212,8 @@ public class Login extends javax.swing.JFrame {
             accountNE();
         }
         for (int i = 0; i < studentAmount; i++) {
-            if (MFBook.students.get(i).stuID == stuID && MFBook.students.get(i).pswd.equals(pswd)) {
+            if (MFBook.students.get(i).stuID
+                    == stuID && MFBook.students.get(i).pswd.equals(pswd)) {
                 MFBook.currentUser = MFBook.students.get(i);
                 Home home = new Home();
                 home.setVisible(true);
@@ -241,8 +243,9 @@ public class Login extends javax.swing.JFrame {
                 }
             }
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
+            LOGGER.log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

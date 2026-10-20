@@ -1,15 +1,15 @@
-public class Home extends javax.swing.JFrame {
-    
 
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Home.class.getName());
+public class Home extends javax.swing.JFrame {
+
+    private static final java.util.logging.Logger LOGGER = 
+            java.util.logging.Logger.getLogger(Home.class.getName());
 
     /**
      * Creates new form NewJFrame
      */
     public Home() {
         initComponents();
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -119,14 +119,14 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        CancelBooking CB = new CancelBooking();
-        CB.setVisible(true);
+        CancelBooking cancelBooking = new CancelBooking();
+        cancelBooking.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BookingMap CB = new BookingMap();
-        CB.setVisible(true);
+        BookingMap bookingMap = new BookingMap();
+        bookingMap.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -137,10 +137,10 @@ public class Home extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {
+        this.setExtendedState(this.getExtendedState() | Home.MAXIMIZED_BOTH);
+    }
 
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {                                  
-        this.setExtendedState(this.getExtendedState()|Home.MAXIMIZED_BOTH);
-    }   
     /**
      * @param args the command line arguments
      */
@@ -158,8 +158,9 @@ public class Home extends javax.swing.JFrame {
                 }
             }
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
+            LOGGER.log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

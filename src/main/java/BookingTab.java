@@ -1,55 +1,63 @@
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class bookingTab extends javax.swing.JFrame {
+public class BookingTab extends javax.swing.JFrame {
+
     int roomNum;
     int capacity = 0;
     int chairs = 0;
     int tables = 0;
     int type;
     boolean avail = true;
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(bookingTab.class.getName());
+    private static final java.util.logging.Logger LOGGER
+            = java.util.logging.Logger.getLogger(BookingTab.class.getName());
 
     private void refreshAppts() {
         int count = 0;
         for (Appointment appt : MFBook.allAppts) {
             if (appt.roomNo == roomNum) {
-                String time1 = String.format("%02d:%02d", appt.hour1, appt.minute1);
-                String time2 = String.format("%02d:%02d", appt.hour2, appt.minute2);
+                String time1 = String.format(
+                        "%02d:%02d", appt.hour1, appt.minute1);
+                String time2 = String.format(
+                        "%02d:%02d", appt.hour2, appt.minute2);
                 Calendar cal = Calendar.getInstance();
                 cal.set(Calendar.HOUR_OF_DAY, 0);
                 cal.set(Calendar.MINUTE, 0);
                 cal.set(Calendar.SECOND, 0);
                 cal.set(Calendar.MILLISECOND, 0);
                 Date today = cal.getTime();
-                if (appt.dateStr.equals(new SimpleDateFormat("dd/MM/yyyy").format(today))) {
+                if (appt.dateStr.equals(
+                        new SimpleDateFormat("dd/MM/yyyy").format(today))) {
+                    String bookingInfo = "ID: " + appt.student.stuID
+                            + ", Time: " + appt.dateStr
+                            + " " + time1 + " -- " + time2;
                     switch (count) {
-                    case 0:
-                        jLabel4.setText("ID: " + appt.student.stuID +", Time: " + appt.dateStr + " " + time1 + " -- " + time2);
-                        count++;
-                        break;
-                    case 1:
-                        jLabel5.setText("ID: " + appt.student.stuID + ", Time: " + appt.dateStr + " " + time1 + " -- " + time2);
-                        count++;
-                        break;
-                    case 2:
-                        jLabel6.setText("ID: " + appt.student.stuID + ", Time: " + appt.dateStr + " " + time1 + " -- " + time2);
-                        count++;
-                        break;
-                    default:
-                        break;
+                        case 0:
+                            jLabel4.setText(bookingInfo);
+                            count++;
+                            break;
+                        case 1:
+                            jLabel5.setText(bookingInfo);
+                            count++;
+                            break;
+                        case 2:
+                            jLabel6.setText(bookingInfo);
+                            count++;
+                            break;
+                        default:
+                            break;
                     }
                 }
             }
         }
     }
-    
-    public bookingTab(int roomNum, int cap, int chair, int table, int roomType) {
+
+    public BookingTab(int roomNum, int cap, int chair, int table, int roomType) {
         initComponents();
-        jSpinner1.setModel(new javax.swing.SpinnerDateModel());
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         this.roomNum = roomNum;
         capacity = cap;
         chairs = chair;
@@ -312,7 +320,7 @@ public class bookingTab extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel18.setText("Home");
-        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel18MouseClicked(evt);
@@ -336,7 +344,7 @@ public class bookingTab extends javax.swing.JFrame {
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel20.setText("Booking Page");
-        jLabel20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel20.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel20MouseClicked(evt);
@@ -487,13 +495,15 @@ public class bookingTab extends javax.swing.JFrame {
         var minute2 = parseText(jTextField4.getText());
         Date date = (Date) jSpinner1.getValue();
         String dateStr = new SimpleDateFormat("dd/MM/yyyy").format(date);
-        if (MFBook.checkTimeValidity(roomNum, date, hour1, minute1, hour2, minute2)) {
+        if (MFBook.checkTimeValidity(roomNum, date, hour1, minute1,
+                hour2, minute2)) {
             System.out.println(hour1 + hour2 + minute1 + minute2);
             jDialog1.pack();
             jDialog1.setLocationRelativeTo(null);
             jDialog1.setVisible(true);
             jLabel17.setText("Booking successful");
-            Appointment appointment = new Appointment(MFBook.currentUser, roomNum, dateStr, hour1, minute1, hour2, minute2);
+            Appointment appointment = new Appointment(MFBook.currentUser,
+                    roomNum, dateStr, hour1, minute1, hour2, minute2);
             MFBook.addAppt(appointment);
             MFBook.currentUser.appointments.add(appointment);
             refreshAppts();
@@ -504,29 +514,29 @@ public class bookingTab extends javax.swing.JFrame {
             jDialog1.setLocationRelativeTo(null);
             jDialog1.setVisible(true);
             jLabel17.setText("error");
-        } 
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private int parseText(String str) {
         str = str.replaceAll("[^0-9]", "");
         return Integer.parseInt(str);
-    } 
-    
+    }
+
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
-        Home H = new Home();
-        H.setVisible(true);
+        Home home = new Home();
+        home.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
         // TODO add your handling code here:
-        BookingMap BM = new BookingMap();
-        BM.setVisible(true);
+        BookingMap bookingMap = new BookingMap();
+        bookingMap.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel20MouseClicked
 
@@ -551,12 +561,13 @@ public class bookingTab extends javax.swing.JFrame {
                 }
             }
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
+            LOGGER.log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new bookingTab(0, 0, 0, 0, 0).setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new BookingTab(0, 0, 0, 0, 0).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
