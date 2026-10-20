@@ -1,19 +1,51 @@
+import java.text.SimpleDateFormat;
 import java.time.LocalTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MFBook {
     static Student currentUser;
     static ArrayList<Student> students = new ArrayList<>();
     static ArrayList<Appointment> allAppts = new ArrayList<>();
     
-    public static boolean checkTimeValidity(int hour1, int minute1, int hour2, int minute2) {
+    public static boolean checkTimeValidity(int roomNo, Date date, int hour1, int minute1, int hour2, int minute2) {
+        Calendar cal = Calendar.getInstance();
+        Calendar cal1 = Calendar.getInstance();
+        cal1.setTime(date);
+        cal1.set(Calendar.HOUR_OF_DAY, 0);
+        cal1.set(Calendar.MINUTE, 0);
+        cal1.set(Calendar.SECOND, 0);
+        cal1.set(Calendar.MILLISECOND, 0);
+        date = cal1.getTime();
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        Date today = cal.getTime();
+        if (date.before(today)) {
+            return false;
+        } else if (date.equals(today)) {
+            LocalTime now = LocalTime.now();
+            int currentHour = now.getHour();
+            int currentMinute = now.getMinute();
+            if (hour1 < currentHour) {
+                System.out.println("Booking start time is in the past!");
+                return false;
+            }else if (hour1 == currentHour && minute1 < currentMinute) {
+                System.out.println("Booking start time is in the past!");
+                return false;
+            }
+        }
+        
         if (hour1 < 0 || hour2 < 0 || minute1 < 0 || minute2 < 0) {
             System.out.println("less than 0");
             return false;
         } else if (hour1 > hour2) {
             System.out.println("case 2");
             return false;
-        } else if (hour1 == hour2 && minute1 > minute2) {
+        } else if (hour1 == hour2 && minute1 >= minute2) {
             System.out.println("case 3");
             return false;
         } else if (minute1 > 59 || minute2 > 59) {
@@ -26,33 +58,22 @@ public class MFBook {
             System.out.println("case 6");
             return false;
         } 
-        LocalTime now = LocalTime.now();
-        int currentHour = now.getHour();
-        int currentMinute = now.getMinute();
-//        if (hour1 < currentHour) {
-//            System.out.println("Booking start time is in the past!");
-//            return false;
-//        }else if (hour1 == currentHour && minute1 < currentMinute) {
-//            System.out.println("Booking start time is in the past!");
-//            return false;
-//        }
+        int start = hour1 * 60 + minute1;
+        int end = hour2 * 60 + minute2;
+        if (end - start > 120) {
+            return false;
+        }
         for (Appointment appt : allAppts) {
             int startA = hour1 * 60 + minute1;
             int endA = hour2 * 60 + minute2;
 
             int startB = appt.hour1 * 60 + appt.minute1;
             int endB = appt.hour2 * 60 + appt.minute2;
-            if (startA < endB && startB < endA) {
+            if (appt.roomNo == roomNo && appt.dateStr.equals(new SimpleDateFormat("dd/MM/yyyy").format(date)) && startA < endB && startB < endA) {
                 System.out.println("overlap");
                 return false;
             }
         }
-//        LocalDate dayObj = LocalDate.now();
-//        int day = dayObj.getDayOfMonth();
-//        if (date <  day) {
-//            System.out.println("date in past");
-//            return false;
-//        }
         
         return true;
     }

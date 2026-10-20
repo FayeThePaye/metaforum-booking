@@ -1,5 +1,6 @@
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class bookingTab extends javax.swing.JFrame {
@@ -17,21 +18,29 @@ public class bookingTab extends javax.swing.JFrame {
             if (appt.roomNo == roomNum) {
                 String time1 = String.format("%02d:%02d", appt.hour1, appt.minute1);
                 String time2 = String.format("%02d:%02d", appt.hour2, appt.minute2);
-                switch (count) {
+                Calendar cal = Calendar.getInstance();
+                cal.set(Calendar.HOUR_OF_DAY, 0);
+                cal.set(Calendar.MINUTE, 0);
+                cal.set(Calendar.SECOND, 0);
+                cal.set(Calendar.MILLISECOND, 0);
+                Date today = cal.getTime();
+                if (appt.dateStr.equals(new SimpleDateFormat("dd/MM/yyyy").format(today))) {
+                    switch (count) {
                     case 0:
-                        jLabel4.setText("Student ID: " + appt.student.stuID +", Timeslot: " + time1 + " -- " + time2);
+                        jLabel4.setText("ID: " + appt.student.stuID +", Time: " + appt.dateStr + " " + time1 + " -- " + time2);
                         count++;
                         break;
                     case 1:
-                        jLabel5.setText("Student ID: " + appt.student.stuID + ", Timeslot: " + time1 + " -- " + time2);
+                        jLabel5.setText("ID: " + appt.student.stuID + ", Time: " + appt.dateStr + " " + time1 + " -- " + time2);
                         count++;
                         break;
                     case 2:
-                        jLabel6.setText("Student ID: " + appt.student.stuID + ", Timeslot: " + time1 + " -- " + time2);
+                        jLabel6.setText("ID: " + appt.student.stuID + ", Time: " + appt.dateStr + " " + time1 + " -- " + time2);
                         count++;
                         break;
                     default:
                         break;
+                    }
                 }
             }
         }
@@ -133,7 +142,7 @@ public class bookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.gridwidth = 7;
         gridBagConstraints.ipadx = 33;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(27, 92, 0, 0);
@@ -142,9 +151,9 @@ public class bookingTab extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jLabel2.setText("Yes");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 10;
+        gridBagConstraints.gridx = 12;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 16;
+        gridBagConstraints.gridwidth = 20;
         gridBagConstraints.ipadx = 13;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(27, 6, 0, 0);
@@ -155,7 +164,7 @@ public class bookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 15;
+        gridBagConstraints.gridwidth = 19;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(26, 92, 0, 0);
         jPanel1.add(jLabel3, gridBagConstraints);
@@ -163,34 +172,34 @@ public class bookingTab extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jLabel4.setText("Slot 1");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 63;
-        gridBagConstraints.ipadx = 265;
+        gridBagConstraints.gridwidth = 80;
+        gridBagConstraints.ipadx = 342;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(28, 92, 0, 55);
+        gridBagConstraints.insets = new java.awt.Insets(28, 109, 0, 0);
         jPanel1.add(jLabel4, gridBagConstraints);
 
         jLabel5.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jLabel5.setText("Slot 2");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 63;
-        gridBagConstraints.ipadx = 265;
+        gridBagConstraints.gridwidth = 80;
+        gridBagConstraints.ipadx = 342;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 92, 0, 55);
+        gridBagConstraints.insets = new java.awt.Insets(6, 109, 0, 0);
         jPanel1.add(jLabel5, gridBagConstraints);
 
         jLabel6.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jLabel6.setText("Slot 3");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 63;
-        gridBagConstraints.ipadx = 265;
+        gridBagConstraints.gridwidth = 80;
+        gridBagConstraints.ipadx = 342;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 92, 0, 55);
+        gridBagConstraints.insets = new java.awt.Insets(6, 109, 0, 0);
         jPanel1.add(jLabel6, gridBagConstraints);
 
         jLabel7.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
@@ -200,7 +209,7 @@ public class bookingTab extends javax.swing.JFrame {
         gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(41, 103, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(47, 109, 0, 0);
         jPanel1.add(jLabel7, gridBagConstraints);
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -221,18 +230,18 @@ public class bookingTab extends javax.swing.JFrame {
         jButton1.addActionListener(this::jButton1ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 13;
-        gridBagConstraints.gridwidth = 64;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridwidth = 81;
         gridBagConstraints.ipadx = 382;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(38, 56, 0, 55);
+        gridBagConstraints.insets = new java.awt.Insets(38, 62, 0, 33);
         jPanel1.add(jButton1, gridBagConstraints);
 
         jLabel8.setText(":");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.gridwidth = 8;
         gridBagConstraints.ipadx = 15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(34, 18, 0, 0);
@@ -243,9 +252,9 @@ public class bookingTab extends javax.swing.JFrame {
         jTextField2.setPreferredSize(new java.awt.Dimension(64, 30));
         jTextField2.addActionListener(this::jTextField2ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 25;
+        gridBagConstraints.gridx = 31;
         gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 37;
+        gridBagConstraints.gridwidth = 47;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipady = -8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
@@ -260,7 +269,7 @@ public class bookingTab extends javax.swing.JFrame {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 11;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.gridheight = 3;
         gridBagConstraints.ipady = -8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(16, 32, 0, 0);
@@ -272,9 +281,9 @@ public class bookingTab extends javax.swing.JFrame {
         jTextField4.setPreferredSize(new java.awt.Dimension(64, 30));
         jTextField4.addActionListener(this::jTextField4ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 25;
+        gridBagConstraints.gridx = 31;
         gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 37;
+        gridBagConstraints.gridwidth = 47;
         gridBagConstraints.ipady = -8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(13, 0, 0, 0);
@@ -284,7 +293,8 @@ public class bookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(19, 18, 0, 0);
@@ -292,9 +302,9 @@ public class bookingTab extends javax.swing.JFrame {
 
         jLabel10.setText("to");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 25;
+        gridBagConstraints.gridx = 31;
         gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 37;
+        gridBagConstraints.gridwidth = 48;
         gridBagConstraints.ipadx = 38;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(8, 15, 0, 0);
@@ -310,7 +320,7 @@ public class bookingTab extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridy = 15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(59, 62, 0, 0);
         jPanel1.add(jLabel18, gridBagConstraints);
@@ -319,7 +329,7 @@ public class bookingTab extends javax.swing.JFrame {
         jLabel19.setText("|");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridy = 15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(59, 51, 0, 0);
         jPanel1.add(jLabel19, gridBagConstraints);
@@ -334,8 +344,8 @@ public class bookingTab extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 14;
-        gridBagConstraints.gridwidth = 36;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.gridwidth = 46;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(59, 16, 0, 0);
         jPanel1.add(jLabel20, gridBagConstraints);
@@ -346,10 +356,16 @@ public class bookingTab extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 45;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(24, 21, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(24, 27, 0, 0);
         jPanel1.add(jLabel21, gridBagConstraints);
 
-        jSpinner1.setModel(new javax.swing.SpinnerDateModel());
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        Date today = cal.getTime();
+        jSpinner1.setModel(new javax.swing.SpinnerDateModel(today, today, null, java.util.Calendar.DAY_OF_MONTH));
         jSpinner1.setToolTipText("");
         jSpinner1.setEditor(new javax.swing.JSpinner.DateEditor(jSpinner1, "dd/MM/yyyy"));
         javax.swing.JSpinner.DateEditor editor = (javax.swing.JSpinner.DateEditor) jSpinner1.getEditor();
@@ -362,10 +378,10 @@ public class bookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 60;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(44, 53, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(50, 53, 0, 0);
         jPanel1.add(jSpinner1, gridBagConstraints);
 
         jTabbedPane1.addTab("Time", jPanel1);
@@ -470,11 +486,8 @@ public class bookingTab extends javax.swing.JFrame {
         var minute1 = parseText(jTextField2.getText());
         var minute2 = parseText(jTextField4.getText());
         Date date = (Date) jSpinner1.getValue();
-        String pattern = "dd/MM/yyyy";
-        DateFormat df = new SimpleDateFormat(pattern);
-        String dateStr = df.format(date);
-        System.out.println(dateStr);
-        if (MFBook.checkTimeValidity(hour1, minute1, hour2, minute2)) {
+        String dateStr = new SimpleDateFormat("dd/MM/yyyy").format(date);
+        if (MFBook.checkTimeValidity(roomNum, date, hour1, minute1, hour2, minute2)) {
             System.out.println(hour1 + hour2 + minute1 + minute2);
             jDialog1.pack();
             jDialog1.setLocationRelativeTo(null);
