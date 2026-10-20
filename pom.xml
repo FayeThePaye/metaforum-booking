@@ -39,7 +39,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>26</maven.compiler.release>
-        <exec.mainClass>e3.samplegui.SampleGUI</exec.mainClass>
+        <exec.mainClass>MFBook</exec.mainClass>
     </properties>
     <name>MFBook</name>
 </project>
