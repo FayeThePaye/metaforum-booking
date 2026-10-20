@@ -1,22 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author au120
- */
 public class Floor1 extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Floor1.class.getName());
 
-    /**
-     * Creates new form Floor1
-     */
+    private static final java.util.logging.Logger logger = 
+            java.util.logging.Logger.getLogger(Floor1.class.getName());
+
     public Floor1() {
         initComponents();
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -272,15 +262,15 @@ public class Floor1 extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-        BookingMap CB = new BookingMap();
-        CB.setVisible(true);
+        BookingMap bookingMap = new BookingMap();
+        bookingMap.setVisible(true);
         this.dispose();
-        
+
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
-        Floor1 F1 = new Floor1();
-        F1.setVisible(true);
+        Floor1 floor1 = new Floor1();
+        floor1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jToggleButton4ActionPerformed
 
@@ -290,29 +280,29 @@ public class Floor1 extends javax.swing.JFrame {
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(16, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(16, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(18, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(18, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(15, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(15, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(17, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(17, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton17ActionPerformed
 

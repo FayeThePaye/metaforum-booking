@@ -1,16 +1,18 @@
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
-public class BookingMap extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(BookingMap.class.getName());
 
+public class BookingMap extends javax.swing.JFrame {
+
+    private static final java.util.logging.Logger LOGGER = 
+            java.util.logging.Logger.getLogger(BookingMap.class.getName());
 
     public BookingMap() {
         initComponents();
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH); 
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         Date d = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-        jLabel2.setText("The current time is "+sdf.format(d));
+        jLabel2.setText("The current time is " + sdf.format(d));
     }
 
     /**
@@ -268,113 +270,113 @@ public class BookingMap extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        Floor1 F1 = new Floor1();
-        F1.setVisible(true);
+        Floor1 floor1 = new Floor1();
+        floor1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(7, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(7, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(12, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(12, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(8, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(8, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(9, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(9, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(10, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(10, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(11, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(11, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(13, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(13, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(14, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(14, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(1, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(1, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(2, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(2, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(3, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(3, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(4, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(4, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(5, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(5, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        bookingTab BT = new bookingTab(6, 0, 0, 0, 0);
-        BT.setVisible(true);
+        BookingTab bookingTab = new BookingTab(6, 0, 0, 0, 0);
+        bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
-        Home H = new Home();
-        H.setVisible(true);
+        Home home = new Home();
+        home.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel18MouseClicked
 
@@ -399,8 +401,9 @@ public class BookingMap extends javax.swing.JFrame {
                 }
             }
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
+            LOGGER.log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
