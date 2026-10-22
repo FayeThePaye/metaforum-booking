@@ -13,6 +13,35 @@ public class BookingTab extends javax.swing.JFrame {
     boolean avail = true;
     private static final java.util.logging.Logger LOGGER
             = java.util.logging.Logger.getLogger(BookingTab.class.getName());
+    
+    public void updateCurrentAvailability(String roomNo) {
+    java.time.LocalDate todayDate = java.time.LocalDate.now();
+    String todayStr = todayDate.format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    
+    java.time.LocalTime now = java.time.LocalTime.now();
+    int currentTotalMinutes = now.getHour() * 60 + now.getMinute();
+    
+    boolean isBookedNow = false;
+    
+    for (Appointment appt : MFBook.allAppts) {
+        if (appt.roomNo.equals(roomNo) && appt.dateStr.equals(todayStr)) {
+            int startMinutes = appt.hour1 * 60 + appt.minute1;
+            int endMinutes = appt.hour2 * 60 + appt.minute2;
+            
+            // Check if the current time falls strictly within an active booking slot
+            if (currentTotalMinutes >= startMinutes && currentTotalMinutes < endMinutes) {
+                isBookedNow = true;
+                break;
+            }
+        }
+    }
+    
+    if (isBookedNow) {
+        jLabel2.setText("No");
+    } else {
+        jLabel2.setText("Yes");
+    }
+}
 
     private void refreshAppts() {
         int count = 0;
@@ -576,7 +605,7 @@ public class BookingTab extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
