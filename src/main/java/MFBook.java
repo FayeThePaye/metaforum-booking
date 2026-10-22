@@ -86,6 +86,7 @@ public class MFBook {
         allAppts.add(appt);
     }
 
+
     //₊˚ ✧ ━━━━⊱⋆⊰━━━━ ✧ ₊˚
     //CSV file management (unclean code)
     //saveappt happens when: 1. new appt created 2. appt cancelled
