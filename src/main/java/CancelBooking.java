@@ -198,7 +198,7 @@ public class CancelBooking extends javax.swing.JFrame {
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
-        BookingMap bookingMap = new BookingMap();
+        Floor0 bookingMap = new Floor0();
         bookingMap.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked

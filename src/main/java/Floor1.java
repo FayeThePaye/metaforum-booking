@@ -292,7 +292,7 @@ public class Floor1 extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-        BookingMap bookingMap = new BookingMap();
+        Floor0 bookingMap = new Floor0();
         bookingMap.setVisible(true);
         this.dispose();
 
