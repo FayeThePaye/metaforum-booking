@@ -10,7 +10,6 @@ public class BookingTab extends javax.swing.JFrame {
     int capacity = 0;
     int chairs = 0;
     int tables = 0;
-    int type;
     boolean avail = true;
     private static final java.util.logging.Logger LOGGER
             = java.util.logging.Logger.getLogger(BookingTab.class.getName());
@@ -55,22 +54,18 @@ public class BookingTab extends javax.swing.JFrame {
         }
     }
 
-    public BookingTab(String roomNum, int cap, int chair, int table, int roomType) {
+    public BookingTab(String roomNum, int cap, int chair, int table) {
         initComponents();
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         this.roomNum = roomNum;
         capacity = cap;
         chairs = chair;
         tables = table;
-        type = roomType;
         refreshAppts();
         jLabel21.setText("Room: " + roomNum);
         jLabel11.setText("Capacity: " + capacity + " people");
         jLabel13.setText("Chairs: " + chairs + " chairs");
         jLabel14.setText("Tables: " + tables + " tables");
-        jLabel12.setText("Outlets: ");
-        jLabel15.setText("Whiteboard: ");
-        jLabel16.setText("Projector: ");
         if (avail) {
             jLabel2.setText("Yes");
         } else {
@@ -117,10 +112,6 @@ public class BookingTab extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
 
         jLabel17.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jLabel17.setText("Hellooooo");
@@ -321,7 +312,7 @@ public class BookingTab extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel18.setText("Home");
-        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel18MouseClicked(evt);
@@ -345,7 +336,7 @@ public class BookingTab extends javax.swing.JFrame {
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel20.setText("Booking Page");
-        jLabel20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel20.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel20MouseClicked(evt);
@@ -440,40 +431,6 @@ public class BookingTab extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Capacity", jPanel2);
 
-        jPanel3.setLayout(new java.awt.GridBagLayout());
-
-        jLabel12.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
-        jLabel12.setText("Outlets");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 241;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(59, 99, 0, 149);
-        jPanel3.add(jLabel12, gridBagConstraints);
-
-        jLabel15.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
-        jLabel15.setText("Outlets");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 241;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(33, 99, 0, 149);
-        jPanel3.add(jLabel15, gridBagConstraints);
-
-        jLabel16.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
-        jLabel16.setText("Outlets");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.ipadx = 241;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(33, 99, 336, 149);
-        jPanel3.add(jLabel16, gridBagConstraints);
-
-        jTabbedPane1.addTab("Utilities", jPanel3);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -482,11 +439,29 @@ public class BookingTab extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 643, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 643, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jSpinner1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSpinner1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinner1MouseClicked
+
+    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
+        // TODO add your handling code here:
+        Floor0 bookingMap = new Floor0();
+        bookingMap.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // TODO add your handling code here:
+        Home home = new Home();
+        home.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -501,61 +476,43 @@ public class BookingTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    var hour1 = parseText(jTextField1.getText());
-    var hour2 = parseText(jTextField3.getText());
-    var minute1 = parseText(jTextField2.getText());
-    var minute2 = parseText(jTextField4.getText());
-    Date date = (Date) jSpinner1.getValue();
-    String dateStr = new SimpleDateFormat("dd/MM/yyyy").format(date);
-    
-    if (MFBook.checkTimeValidity(roomNum, date, hour1, minute1, hour2, minute2)) {
-        System.out.println(hour1 + hour2 + minute1 + minute2);
-        
-        // Success case: Show success inline message
-        Error.setForeground(new java.awt.Color(0, 150, 0)); // Green for success
-        Error.setText("Booking successful!");
+        var hour1 = parseText(jTextField1.getText());
+        var hour2 = parseText(jTextField3.getText());
+        var minute1 = parseText(jTextField2.getText());
+        var minute2 = parseText(jTextField4.getText());
+        Date date = (Date) jSpinner1.getValue();
+        String dateStr = new SimpleDateFormat("dd/MM/yyyy").format(date);
 
-        Appointment appointment = new Appointment(MFBook.currentUser,
+        if (MFBook.checkTimeValidity(roomNum, date, hour1, minute1, hour2, minute2)) {
+            System.out.println(hour1 + hour2 + minute1 + minute2);
+
+            // Success case: Show success inline message
+            Error.setForeground(new java.awt.Color(0, 150, 0)); // Green for success
+            Error.setText("Booking successful!");
+
+            Appointment appointment = new Appointment(MFBook.currentUser,
                 roomNum, dateStr, hour1, minute1, hour2, minute2);
-        MFBook.addAppt(appointment);
-        MFBook.currentUser.appointments.add(appointment);
-        refreshAppts();
-        MFBook.saveApptToCSV();
-    } else {
-        System.out.println("error");
-        
-        // Error case: Show error inline message on screen
-        Error.setForeground(java.awt.Color.RED); // Red for error
-        Error.setText("Error: Invalid time slot, past time, or overlapping booking.");
+            MFBook.addAppt(appointment);
+            MFBook.currentUser.appointments.add(appointment);
+            refreshAppts();
+            MFBook.saveApptToCSV();
+        } else {
+            System.out.println("error");
+
+            // Error case: Show error inline message on screen
+            Error.setForeground(java.awt.Color.RED); // Red for error
+            Error.setText("Error: Invalid time slot, past time, or overlapping booking.");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private int parseText(String str) {
-        str = str.replaceAll("[^0-9]", "");
-        return Integer.parseInt(str);
-    }
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
-        // TODO add your handling code here:
-        Home home = new Home();
-        home.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel18MouseClicked
-
-    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-        // TODO add your handling code here:
-        Floor0 bookingMap = new Floor0();
-        bookingMap.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel20MouseClicked
-
-    private void jSpinner1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSpinner1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jSpinner1MouseClicked
+    private int parseText(String str) {
+        str = str.replaceAll("[^0-9]", "");
+        return Integer.parseInt(str);
+    }
 
     /**
      * @param args the command line arguments
@@ -580,7 +537,7 @@ public class BookingTab extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new BookingTab("", 0, 0, 0, 0).setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new BookingTab("", 0, 0, 0).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -590,11 +547,8 @@ public class BookingTab extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -610,7 +564,6 @@ public class BookingTab extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;

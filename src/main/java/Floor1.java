@@ -310,28 +310,28 @@ public class Floor1 extends javax.swing.JFrame {
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab("7", 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("7", 2, 2, 1);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab("10", 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("10", 2, 2, 1);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab("8", 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("8", 2, 2, 1);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab("9", 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("9", 2, 2, 1);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton17ActionPerformed
