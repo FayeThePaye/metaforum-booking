@@ -402,7 +402,7 @@ public class BookingTab extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 51, 51));
         jLabel15.setText("Error: Input contains non-numbers.");
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel4.setVisible(false);
+        jLabel15.setVisible(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 15;
