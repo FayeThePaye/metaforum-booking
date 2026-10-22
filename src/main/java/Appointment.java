@@ -5,14 +5,14 @@ public class Appointment {
 
     String dateStr;
     Student student;
-    int roomNo;
+    String roomNo;
     int hour1;
     int hour2;
     int minute1;
     int minute2;
     //fhkdhfkwe
 
-    public Appointment(Student student, int roomNo, String dateStr, int hour1, 
+    public Appointment(Student student, String roomNo, String dateStr, int hour1, 
                 int minute1, int hour2, int minute2) {
         this.dateStr = dateStr;
         this.roomNo = roomNo;

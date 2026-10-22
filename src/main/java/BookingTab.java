@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class BookingTab extends javax.swing.JFrame {
 
-    int roomNum;
+    String roomNum;
     int capacity = 0;
     int chairs = 0;
     int tables = 0;
@@ -18,7 +18,7 @@ public class BookingTab extends javax.swing.JFrame {
     private void refreshAppts() {
         int count = 0;
         for (Appointment appt : MFBook.allAppts) {
-            if (appt.roomNo == roomNum) {
+            if (appt.roomNo.equals(roomNum)) {
                 String time1 = String.format(
                         "%02d:%02d", appt.hour1, appt.minute1);
                 String time2 = String.format(
@@ -55,7 +55,7 @@ public class BookingTab extends javax.swing.JFrame {
         }
     }
 
-    public BookingTab(int roomNum, int cap, int chair, int table, int roomType) {
+    public BookingTab(String roomNum, int cap, int chair, int table, int roomType) {
         initComponents();
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         this.roomNum = roomNum;
@@ -501,7 +501,7 @@ public class BookingTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        var hour1 = parseText(jTextField1.getText());
+    var hour1 = parseText(jTextField1.getText());
     var hour2 = parseText(jTextField3.getText());
     var minute1 = parseText(jTextField2.getText());
     var minute2 = parseText(jTextField4.getText());
@@ -580,7 +580,7 @@ public class BookingTab extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new BookingTab(0, 0, 0, 0, 0).setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new BookingTab("", 0, 0, 0, 0).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

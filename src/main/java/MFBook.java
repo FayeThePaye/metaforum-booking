@@ -11,7 +11,7 @@ public class MFBook {
     static ArrayList<Student> students = new ArrayList<>();
     static ArrayList<Appointment> allAppts = new ArrayList<>();
 
-    public static boolean checkTimeValidity(int roomNo, Date date, 
+    public static boolean checkTimeValidity(String roomNo, Date date, 
             int hour1, int minute1, int hour2, int minute2) {
         Calendar cal = Calendar.getInstance();
         Calendar cal1 = Calendar.getInstance();
@@ -71,7 +71,7 @@ public class MFBook {
 
             int startB = appt.hour1 * 60 + appt.minute1;
             int endB = appt.hour2 * 60 + appt.minute2;
-            if (appt.roomNo == roomNo && appt.dateStr.equals(
+            if (appt.roomNo.equals(roomNo) && appt.dateStr.equals(
                     new SimpleDateFormat("dd/MM/yyyy").format(date)) 
                     && startA < endB && startB < endA) {
                 System.out.println("overlap");
@@ -136,7 +136,7 @@ public class MFBook {
                 String[] data = line.split(",");
 
                 if (data.length == 7) {
-                    int roomNo = Integer.parseInt(data[0].trim());
+                    String roomNo = data[0].trim();
                     int studentID = Integer.parseInt(data[1].trim());
                     String dateStr = data[2].trim();
                     int hour1 = Integer.parseInt(data[3].trim());

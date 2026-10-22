@@ -1,6 +1,8 @@
 
+import java.awt.Image;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.ImageIcon;
 
 public class BookingMap extends javax.swing.JFrame {
 
@@ -57,11 +59,12 @@ public class BookingMap extends javax.swing.JFrame {
         jToggleButton1.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 18;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(3, 159, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(34, 54, 0, 0);
         getContentPane().add(jToggleButton1, gridBagConstraints);
 
         jToggleButton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -69,78 +72,72 @@ public class BookingMap extends javax.swing.JFrame {
         jToggleButton2.addActionListener(this::jToggleButton2ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 159, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 54, 0, 0);
         getContentPane().add(jToggleButton2, gridBagConstraints);
 
         jButton1.setText("Book");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(this::jButton1ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 40, 0, 166);
+        gridBagConstraints.insets = new java.awt.Insets(80, 6, 0, 86);
         getContentPane().add(jButton1, gridBagConstraints);
 
         jButton2.setText("Book");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.addActionListener(this::jButton2ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(37, 40, 0, 166);
+        gridBagConstraints.insets = new java.awt.Insets(40, 6, 0, 86);
         getContentPane().add(jButton2, gridBagConstraints);
 
         jButton3.setText("Book");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton3.addActionListener(this::jButton3ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(15, 40, 0, 166);
+        gridBagConstraints.insets = new java.awt.Insets(51, 6, 0, 86);
         getContentPane().add(jButton3, gridBagConstraints);
 
         jButton4.setText("Book");
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton4.addActionListener(this::jButton4ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridheight = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(24, 40, 0, 166);
+        gridBagConstraints.insets = new java.awt.Insets(3, 6, 0, 86);
         getContentPane().add(jButton4, gridBagConstraints);
 
         jButton5.setText("Book");
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton5.addActionListener(this::jButton5ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 13;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(15, 40, 0, 166);
+        gridBagConstraints.insets = new java.awt.Insets(56, 6, 0, 86);
         getContentPane().add(jButton5, gridBagConstraints);
 
         jButton6.setText("Book");
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton6.addActionListener(this::jButton6ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 15;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(25, 40, 0, 166);
+        gridBagConstraints.insets = new java.awt.Insets(42, 6, 0, 86);
         getContentPane().add(jButton6, gridBagConstraints);
 
         jButton7.setText("Book");
@@ -148,9 +145,10 @@ public class BookingMap extends javax.swing.JFrame {
         jButton7.addActionListener(this::jButton7ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 35, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(81, 33, 0, 0);
         getContentPane().add(jButton7, gridBagConstraints);
 
         jButton8.setText("Book");
@@ -158,9 +156,10 @@ public class BookingMap extends javax.swing.JFrame {
         jButton8.addActionListener(this::jButton8ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(33, 35, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(45, 33, 0, 0);
         getContentPane().add(jButton8, gridBagConstraints);
 
         jButton9.setText("Book");
@@ -168,9 +167,9 @@ public class BookingMap extends javax.swing.JFrame {
         jButton9.addActionListener(this::jButton9ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(36, 35, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(47, 33, 0, 0);
         getContentPane().add(jButton9, gridBagConstraints);
 
         jButton10.setText("Book");
@@ -178,10 +177,10 @@ public class BookingMap extends javax.swing.JFrame {
         jButton10.addActionListener(this::jButton10ActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 35, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(40, 33, 0, 0);
         getContentPane().add(jButton10, gridBagConstraints);
 
         jButton11.setText("Book");
@@ -192,7 +191,7 @@ public class BookingMap extends javax.swing.JFrame {
         gridBagConstraints.gridy = 10;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(28, 35, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(58, 33, 0, 0);
         getContentPane().add(jButton11, gridBagConstraints);
 
         jButton12.setText("Book");
@@ -202,7 +201,7 @@ public class BookingMap extends javax.swing.JFrame {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(32, 35, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(46, 33, 0, 0);
         getContentPane().add(jButton12, gridBagConstraints);
 
         jButton13.setText("Book");
@@ -211,9 +210,8 @@ public class BookingMap extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 13;
-        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 35, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(46, 33, 0, 0);
         getContentPane().add(jButton13, gridBagConstraints);
 
         jButton14.setText("Book");
@@ -222,12 +220,23 @@ public class BookingMap extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 15;
-        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(26, 35, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(41, 33, 0, 0);
         getContentPane().add(jButton14, gridBagConstraints);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MetaMap1.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MetaMap1.jpeg"))); // NOI18N
+        jLabel1.setMaximumSize(new java.awt.Dimension(400, 400));
+        jLabel1.setMinimumSize(new java.awt.Dimension(400, 400));
+        jLabel1.setPreferredSize(new java.awt.Dimension(400, 400));
+        jLabel1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jLabel1AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jLabel1.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
                 jLabel1ComponentResized(evt);
@@ -236,24 +245,21 @@ public class BookingMap extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.gridheight = 18;
-        gridBagConstraints.ipady = 71;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 146;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 9, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(70, 6, 0, 0);
         getContentPane().add(jLabel1, gridBagConstraints);
 
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         jLabel2.setText("jLabel2");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
-        getContentPane().add(jLabel2, gridBagConstraints);
+        getContentPane().add(jLabel2, new java.awt.GridBagConstraints());
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel18.setText("Home");
-        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel18.setText("Home Page");
+        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel18MouseClicked(evt);
@@ -261,9 +267,9 @@ public class BookingMap extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 18;
+        gridBagConstraints.gridy = 19;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 140, 15, 0);
+        gridBagConstraints.insets = new java.awt.Insets(18, 139, 17, 0);
         getContentPane().add(jLabel18, gridBagConstraints);
 
         pack();
@@ -277,98 +283,98 @@ public class BookingMap extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(7, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("4", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(12, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("2", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(8, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("D", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(9, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("3", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(10, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("C", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(11, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("B", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(13, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("A", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(14, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("1", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(1, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("5", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(2, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("E", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(3, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("H", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(4, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("F", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(5, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("G", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        BookingTab bookingTab = new BookingTab(6, 0, 0, 0, 0);
+        BookingTab bookingTab = new BookingTab("6", 0, 0, 0, 0);
         bookingTab.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -383,6 +389,14 @@ public class BookingMap extends javax.swing.JFrame {
     private void jLabel1ComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentResized
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel1ComponentResized
+
+    private void jLabel1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel1AncestorAdded
+        ImageIcon icon = new ImageIcon(getClass().getResource("/MetaMap1.jpeg"));
+        Image img = icon.getImage();
+        Image scaled = img.getScaledInstance(400, 550, WIDTH);
+        ImageIcon scaledIcon = new ImageIcon(scaled);
+        jLabel1.setIcon(scaledIcon);
+    }//GEN-LAST:event_jLabel1AncestorAdded
 
     /**
      * @param args the command line arguments
