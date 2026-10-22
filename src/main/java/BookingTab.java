@@ -71,6 +71,7 @@ public class BookingTab extends javax.swing.JFrame {
         } else {
             jLabel2.setText("No");
         }
+        jLabel15.setVisible(false);
     }
 
     /**
@@ -108,6 +109,7 @@ public class BookingTab extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
         Error = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -174,7 +176,7 @@ public class BookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 134;
+        gridBagConstraints.gridwidth = 139;
         gridBagConstraints.ipadx = 342;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(28, 110, 0, 0);
@@ -185,7 +187,7 @@ public class BookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 134;
+        gridBagConstraints.gridwidth = 139;
         gridBagConstraints.ipadx = 342;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 110, 0, 0);
@@ -196,7 +198,7 @@ public class BookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 134;
+        gridBagConstraints.gridwidth = 139;
         gridBagConstraints.ipadx = 342;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 110, 0, 0);
@@ -231,7 +233,7 @@ public class BookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 14;
-        gridBagConstraints.gridwidth = 135;
+        gridBagConstraints.gridwidth = 140;
         gridBagConstraints.ipadx = 382;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(24, 63, 0, 34);
@@ -254,7 +256,7 @@ public class BookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 40;
         gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 93;
+        gridBagConstraints.gridwidth = 98;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
@@ -283,7 +285,7 @@ public class BookingTab extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 40;
         gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 93;
+        gridBagConstraints.gridwidth = 98;
         gridBagConstraints.gridheight = 3;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
@@ -320,7 +322,7 @@ public class BookingTab extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 16;
+        gridBagConstraints.gridy = 17;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(26, 20, 0, 0);
         jPanel1.add(jLabel18, gridBagConstraints);
@@ -329,7 +331,7 @@ public class BookingTab extends javax.swing.JFrame {
         jLabel19.setText("|");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 16;
+        gridBagConstraints.gridy = 17;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(26, 18, 0, 0);
         jPanel1.add(jLabel19, gridBagConstraints);
@@ -344,19 +346,20 @@ public class BookingTab extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 16;
+        gridBagConstraints.gridy = 17;
         gridBagConstraints.gridwidth = 92;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(26, 7, 0, 0);
         jPanel1.add(jLabel20, gridBagConstraints);
 
+        jLabel21.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         jLabel21.setText("Room: ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 45;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(24, 28, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(21, 28, 0, 0);
         jPanel1.add(jLabel21, gridBagConstraints);
 
         Calendar cal = Calendar.getInstance();
@@ -389,11 +392,25 @@ public class BookingTab extends javax.swing.JFrame {
         Error.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 15;
+        gridBagConstraints.gridy = 16;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(46, 1, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 1, 0, 0);
         jPanel1.add(Error, gridBagConstraints);
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel15.setText("Error: Input contains non-numbers.");
+        jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel4.setVisible(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.gridwidth = 97;
+        gridBagConstraints.ipady = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 53, 0, 0);
+        jPanel1.add(jLabel15, gridBagConstraints);
 
         jTabbedPane1.addTab("Time", jPanel1);
 
@@ -476,6 +493,7 @@ public class BookingTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jLabel15.setVisible(false);
         var hour1 = parseText(jTextField1.getText());
         var hour2 = parseText(jTextField3.getText());
         var minute1 = parseText(jTextField2.getText());
@@ -510,7 +528,12 @@ public class BookingTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private int parseText(String str) {
-        str = str.replaceAll("[^0-9]", "");
+        str = str.trim();
+        try {
+            Integer.valueOf(str);
+        } catch (NumberFormatException e) {
+            jLabel15.setVisible(true);
+        }
         return Integer.parseInt(str);
     }
 
@@ -549,6 +572,7 @@ public class BookingTab extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;

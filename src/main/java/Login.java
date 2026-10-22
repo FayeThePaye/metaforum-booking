@@ -18,7 +18,7 @@ public class Login extends javax.swing.JFrame {
     String pswd;
     
     public void accountNE() {
-        
+        jLabel4.setText("This account doesn't exist / password error");
         jLabel4.setVisible(true);
     }
 
@@ -171,7 +171,12 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
-        stuID = Integer.parseInt(jTextField1.getText());
+        try {
+            stuID = Integer.parseInt(jTextField1.getText());
+        } catch (NumberFormatException e) {
+            jLabel4.setText("Please enter a valid student ID");
+            jLabel4.setVisible(true);
+        }
         pswd = jPasswordField1.getText();
         boolean exists = false;
 
@@ -211,18 +216,21 @@ public class Login extends javax.swing.JFrame {
         if (studentAmount == 0) {
             accountNE();
         }
-        for (int i = 0; i < studentAmount; i++) {
-            if (MFBook.students.get(i).stuID
-                    == stuID && MFBook.students.get(i).pswd.equals(pswd)) {
-                MFBook.currentUser = MFBook.students.get(i);
-                Home home = new Home();
-                home.setVisible(true);
-                this.dispose();
+        boolean found = false;
+        for (Student student : MFBook.students) {
+            if (student.stuID == stuID
+                    && student.pswd.equals(pswd)) {
+                MFBook.currentUser = student;
+                found = true;
                 break;
-            } else {
-                System.out.println("wrong");
-                accountNE();
             }
+        }
+        if (found) {
+            Home home = new Home();
+            home.setVisible(true);
+            this.dispose();
+        } else {
+            accountNE();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
