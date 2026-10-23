@@ -187,9 +187,9 @@ public class Floor1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Floorneg1.jpeg"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(343, 442));
-        jLabel1.setMinimumSize(new java.awt.Dimension(343, 442));
-        jLabel1.setPreferredSize(new java.awt.Dimension(343, 442));
+        jLabel1.setMaximumSize(new java.awt.Dimension(400, 550));
+        jLabel1.setMinimumSize(new java.awt.Dimension(400, 550));
+        jLabel1.setPreferredSize(new java.awt.Dimension(400, 550));
         jLabel1.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jLabel1AncestorAdded(evt);
