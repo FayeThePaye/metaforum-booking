@@ -527,33 +527,39 @@ public class BookingTab extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jLabel15.setVisible(false);
-        var hour1 = parseText(jTextField1.getText());
-        var hour2 = parseText(jTextField3.getText());
-        var minute1 = parseText(jTextField2.getText());
-        var minute2 = parseText(jTextField4.getText());
-        Date date = (Date) jSpinner1.getValue();
-        String dateStr = new SimpleDateFormat("dd/MM/yyyy").format(date);
+        try {
+            var hour1 = parseText(jTextField1.getText());
+            var hour2 = parseText(jTextField3.getText());
+            var minute1 = parseText(jTextField2.getText());
+            var minute2 = parseText(jTextField4.getText());
 
-        if (MFBook.checkTimeValidity(roomNum, date, hour1, minute1, hour2, minute2)) {
-            System.out.println(hour1 + hour2 + minute1 + minute2);
+            Date date = (Date) jSpinner1.getValue();
+            String dateStr = new SimpleDateFormat("dd/MM/yyyy").format(date);
 
-            // Success case: Show success inline message
-            Error.setForeground(new java.awt.Color(0, 150, 0)); // Green for success
-            Error.setText("Booking successful!");
+            if (MFBook.checkTimeValidity(roomNum, date, hour1, minute1, hour2, minute2)) {
+                System.out.println(hour1 + hour2 + minute1 + minute2);
 
-            Appointment appointment = new Appointment(MFBook.currentUser,
-                roomNum, dateStr, hour1, minute1, hour2, minute2);
-            MFBook.addAppt(appointment);
-            MFBook.currentUser.appointments.add(appointment);
-            refreshAppts();
-            MFBook.saveApptToCSV();
-        } else {
-            System.out.println("error");
+                // Success case: Show success inline message
+                Error.setForeground(new java.awt.Color(0, 150, 0)); // Green for success
+                Error.setText("Booking successful!");
 
-            // Error case: Show error inline message on screen
-            Error.setForeground(java.awt.Color.RED); // Red for error
-            Error.setText("Error: Invalid time slot, past time, or overlapping booking.");
+                Appointment appointment = new Appointment(MFBook.currentUser,
+                    roomNum, dateStr, hour1, minute1, hour2, minute2);
+                MFBook.addAppt(appointment);
+                MFBook.currentUser.appointments.add(appointment);
+                refreshAppts();
+                MFBook.saveApptToCSV();
+            } else {
+                System.out.println("error");
+
+                // Error case: Show error inline message on screen
+                Error.setForeground(java.awt.Color.RED); // Red for error
+                Error.setText("Error: Invalid time slot, past time, or overlapping booking.");
+            }
+        } catch (NumberFormatException e) {
+            jLabel15.setVisible(true);
         }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -561,13 +567,7 @@ public class BookingTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private int parseText(String str) {
-        str = str.trim();
-        try {
-            Integer.valueOf(str);
-        } catch (NumberFormatException e) {
-            jLabel15.setVisible(true);
-        }
-        return Integer.parseInt(str);
+        return Integer.parseInt(str.trim());
     }
 
     /**

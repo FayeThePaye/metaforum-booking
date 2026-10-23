@@ -177,38 +177,49 @@ public class Login extends javax.swing.JFrame {
             jLabel4.setText("Please enter a valid student ID");
             jLabel4.setVisible(true);
         }
-        pswd = jPasswordField1.getText();
-        boolean exists = false;
+        
+        if (!jPasswordField1.getText().equals("")) {
+            pswd = jPasswordField1.getText();
+            boolean exists = false;
 
-        for (Student student : MFBook.students) {
-            if (student.stuID == stuID) {
-                exists = true;
+            for (Student student : MFBook.students) {
+                if (student.stuID == stuID) {
+                    exists = true;
+                }
             }
-        }
 
-        if (!exists) {
-            System.out.println("account created");
-            jLabel4.setVisible(false);
-            System.out.println(stuID + pswd);
+            if (!exists) {
+                System.out.println("account created");
+                jLabel4.setVisible(false);
+                System.out.println(stuID + pswd);
 
-            Student student = new Student(stuID, pswd);
-            MFBook.students.add(student);
+                Student student = new Student(stuID, pswd);
+                MFBook.students.add(student);
 
-            MFBook.saveAccountToCSV(stuID, pswd);
+                MFBook.saveAccountToCSV(stuID, pswd);
 
-            MFBook.currentUser = student;
-            Home home = new Home();
-            home.setVisible(true);
-            this.dispose();
+                MFBook.currentUser = student;
+                Home home = new Home();
+                home.setVisible(true);
+                this.dispose();
+            } else {
+                System.out.println("account already exists");
+                jLabel4.setText(" This account already exists!");
+                jLabel4.setVisible(true);
+            }
         } else {
-            System.out.println("account already exists");
-            jLabel4.setText(" This account already exists!");
+            jLabel4.setText("Please enter a password");
             jLabel4.setVisible(true);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        stuID = Integer.parseInt(jTextField1.getText());
+        try {
+            stuID = Integer.parseInt(jTextField1.getText());
+        } catch (NumberFormatException e) {
+            jLabel4.setText("Please enter a valid student ID");
+            jLabel4.setVisible(true);
+        }
         pswd = jPasswordField1.getText();
         jLabel4.setVisible(false);
         System.out.println(stuID + pswd);
