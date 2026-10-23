@@ -14,10 +14,10 @@ public class BookingTab extends javax.swing.JFrame {
     private static final java.util.logging.Logger LOGGER
             = java.util.logging.Logger.getLogger(BookingTab.class.getName());
     
-    public void updateCurrentAvailability(String roomNo) {
+    private void updateCurrentAvailability(String roomNo) {
     java.time.LocalDate todayDate = java.time.LocalDate.now();
     String todayStr = todayDate.format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-    
+    System.out.println(todayStr);
     java.time.LocalTime now = java.time.LocalTime.now();
     int currentTotalMinutes = now.getHour() * 60 + now.getMinute();
     
@@ -37,13 +37,16 @@ public class BookingTab extends javax.swing.JFrame {
     }
     
     if (isBookedNow) {
-        jLabel2.setText("No");
-    } else {
         jLabel2.setText("Yes");
+        System.out.println("is not booked");
+    } else {
+        jLabel2.setText("No");
+        System.out.println("is booked");
     }
 }
 
     private void refreshAppts() {
+        updateCurrentAvailability(roomNum);
         int count = 0;
         for (Appointment appt : MFBook.allAppts) {
             if (appt.roomNo.equals(roomNum)) {
@@ -101,6 +104,7 @@ public class BookingTab extends javax.swing.JFrame {
             jLabel2.setText("No");
         }
         jLabel15.setVisible(false);
+        updateCurrentAvailability(roomNum);
     }
 
     /**
@@ -169,7 +173,7 @@ public class BookingTab extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
-        jLabel1.setText("Availability:");
+        jLabel1.setText("Current Availability:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;

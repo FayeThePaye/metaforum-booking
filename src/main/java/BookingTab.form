@@ -88,7 +88,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft YaHei UI" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Availability:"/>
+                <Property name="text" type="java.lang.String" value="Current Availability:"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -296,7 +296,7 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Home"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Default Cursor"/>
+                  <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
                 </Property>
               </Properties>
               <Events>
@@ -328,7 +328,7 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Booking Page"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Default Cursor"/>
+                  <Color id="&#x9ed8;&#x8ba4;&#x5149;&#x6807;"/>
                 </Property>
               </Properties>
               <Events>
